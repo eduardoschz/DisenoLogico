@@ -1,0 +1,34 @@
+// Lattice TS Stimulus Data from the Waveform Editor
+NETWORK unam
+MODULE unam
+XRESET_SIGNAL !XRESET 0@0ns 1@0ns
+XRESET_SIGNAL XRESET 0@0ns 1@0ns
+VECTOR XTEST_OE PATTERN 1#0ns
+
+
+// Create Dummy Wires to Connect to signals
+
+
+
+// Code for all top level Inputs and BiDirs, etc.
+
+
+VECTOR N0 PATTERN 1*(\
+ 1#0ps,\
+  1#79000ps   )
+
+VECTOR N1 PATTERN 1*(\
+ 1#0ps,\
+ 0#1000ps,\
+ 1#79000ps,\
+  1#112500ps   )
+
+
+
+FTRACE(test2.TRA, "%12t: %b%b%b%b%b%b%b%b%b%b->%b%b%b%b", $time, N9, N8, N7, N6, N5, N4, N3, N2, N1, N0, A, B, C, D);
+SET INTERNAL_ONLY_ALL_SET$$ [A,B,C,D,N9,N8,N7,N6,N5,N4,N3,N2,N1,N0]
+BREAK IF INTERNAL_ONLY_ALL_SET$$->? DO PRINT
+
+RUN
+
+ÿ

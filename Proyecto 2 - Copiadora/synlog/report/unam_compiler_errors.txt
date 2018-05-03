@@ -1,0 +1,2 @@
+@E: CD409 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\deco - dipswitch.vhd":19:418:19:680|Object of indexed name is not an array
+

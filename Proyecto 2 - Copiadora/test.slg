@@ -1,0 +1,8 @@
+ticksize 100 ps
+stepsize 100000 ps
+mode unit
+Loading netlist......
+Loading netlist successfully.
+run 431.5 ns
+Operation RUN ends.
+quit

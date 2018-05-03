@@ -1,0 +1,27 @@
+Section Cross Reference File
+Design 'unam' created Wed May 02 22:25:56 2018
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst       un16_d_0_a2_1_0_                          un16_d_0_a2_1[0]
+   Inst         un16_d_0_a2_0_                            un16_d_0_a2[0]
+   Inst         un16_d_0_x2_0_                            un16_d_0_x2[0]
+   Net             un16_d_0__n                                 un16_d[0]
+   Net           un16_d_1_0__n                               un16_d_1[0]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     N0
+        Input     N1
+        Input     N2
+        Input     N3
+        Input     N4
+        Input     N5
+        Input     N6
+        Input     N7
+        Input     N8
+        Input     N9
+        Output     D
+        Output     C
+        Output     B
+        Output     A
+End
