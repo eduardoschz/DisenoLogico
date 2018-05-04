@@ -1,0 +1,84 @@
+#$ DATE Thu May 03 22:24:30 2018
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE copiadora
+#$ PINS 9 A0 A1 A2 A3 B0 B1 B2 B3 OT
+#$ NODES 32 N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i A2_i B2_i \
+#  A3_i B3_i A1_c A2_c A3_c B0_c B1_c B2_c B3_c B0_c_i \
+#  N_10_i N_11_i N_12_i N_13_i N_14_i N_15_i N_9_0 N_9_0_1 N_9_0_2 N_9_0_3 \
+#  N_9_0_4 N_9_0_5 
+.model copiadora
+.inputs A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF N_10.BLIF N_11.BLIF \
+  N_12.BLIF N_13.BLIF N_14.BLIF N_15.BLIF A1_i.BLIF B1_i.BLIF A2_i.BLIF B2_i.BLIF A3_i.BLIF \
+  B3_i.BLIF A1_c.BLIF A2_c.BLIF A3_c.BLIF B0_c.BLIF B1_c.BLIF B2_c.BLIF B3_c.BLIF B0_c_i.BLIF \
+  N_10_i.BLIF N_11_i.BLIF N_12_i.BLIF N_13_i.BLIF N_14_i.BLIF N_15_i.BLIF N_9_0.BLIF N_9_0_1.BLIF N_9_0_2.BLIF \
+  N_9_0_3.BLIF N_9_0_4.BLIF N_9_0_5.BLIF  
+.outputs OT N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i A2_i B2_i \
+  A3_i B3_i A1_c A2_c A3_c B0_c B1_c B2_c B3_c B0_c_i N_10_i \
+  N_11_i N_12_i N_13_i N_14_i N_15_i N_9_0 N_9_0_1 N_9_0_2 N_9_0_3 N_9_0_4 N_9_0_5
+.names  A1.BLIF A1_c
+1 1
+.names  A2.BLIF A2_c
+1 1
+.names  A3.BLIF A3_c
+1 1
+.names  B0.BLIF B0_c
+1 1
+.names  B1.BLIF B1_c
+1 1
+.names  B2.BLIF B2_c
+1 1
+.names  B3.BLIF B3_c
+1 1
+.names  N_9_0.BLIF OT
+1 1
+.names  N_13_i.BLIF N_14_i.BLIF N_9_0_3
+11 1
+.names  N_9_0_1.BLIF N_9_0_2.BLIF N_9_0_4
+11 1
+.names  N_9_0_3.BLIF N_15_i.BLIF N_9_0_5
+11 1
+.names  N_9_0_4.BLIF N_9_0_5.BLIF N_9_0
+11 1
+.names  B0_c.BLIF B0_c_i
+0 1
+.names  N_10.BLIF N_10_i
+0 1
+.names  N_11.BLIF N_11_i
+0 1
+.names  N_12.BLIF N_12_i
+0 1
+.names  N_13.BLIF N_13_i
+0 1
+.names  N_14.BLIF N_14_i
+0 1
+.names  N_15.BLIF N_15_i
+0 1
+.names  B0_c_i.BLIF N_10_i.BLIF N_9_0_1
+11 1
+.names  N_11_i.BLIF N_12_i.BLIF N_9_0_2
+11 1
+.names  B3_c.BLIF B3_i
+0 1
+.names  A3_c.BLIF B3_i.BLIF N_10
+11 1
+.names  A3_c.BLIF A3_i
+0 1
+.names  A3_i.BLIF B3_c.BLIF N_11
+11 1
+.names  B2_c.BLIF B2_i
+0 1
+.names  A2_c.BLIF B2_i.BLIF N_12
+11 1
+.names  A2_c.BLIF A2_i
+0 1
+.names  A2_i.BLIF B2_c.BLIF N_13
+11 1
+.names  B1_c.BLIF B1_i
+0 1
+.names  A1_c.BLIF B1_i.BLIF N_14
+11 1
+.names  A1_c.BLIF A1_i
+0 1
+.names  A1_i.BLIF B1_c.BLIF N_15
+11 1
+.end

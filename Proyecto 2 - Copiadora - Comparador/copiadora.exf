@@ -1,0 +1,17 @@
+Section Cross Reference File
+Design 'copiadora' created Thu May 03 22:24:30 2018
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     A0
+        Input     A1
+        Input     A2
+        Input     A3
+        Input     B0
+        Input     B1
+        Input     B2
+        Input     B3
+        Output     OT
+End

@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 2.0 
+PROJECT Proyecto2Copiadora_Comparador
+DESIGN proyecto2copiadora_comparador Normal
+DEVKIT GAL22V10D-10LP
+ENTRY Pure VHDL
+MODULE programacomparador.vhd
+MODSTYLE copiadora Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE copiadora

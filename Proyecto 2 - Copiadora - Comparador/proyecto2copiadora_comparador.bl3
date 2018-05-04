@@ -1,0 +1,25 @@
+#$ TOOL ispLEVER Classic 2.0.00.17.20.15
+#$ DATE Thu May 03 22:24:30 2018
+#$ MODULE copiadora
+#$ PINS 8 A1 A2 A3 B0 B1 B2 B3 OT
+
+.model copiadora
+.inputs A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF
+.outputs OT
+.names A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF OT
+0000000 1
+1000100 1
+0100010 1
+1100110 1
+0010001 1
+1010101 1
+0110011 1
+1110111 1
+-1---0- 0
+-0---1- 0
+1---0-- 0
+0---1-- 0
+--1---0 0
+--0---1 0
+---1--- 0
+.end

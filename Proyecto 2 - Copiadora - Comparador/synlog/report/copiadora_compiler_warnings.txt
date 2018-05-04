@@ -1,0 +1,2 @@
+@W: CL159 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":8:2:8:3|Input A0 is unused
+
