@@ -1,7 +1,7 @@
 C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  copiadora  -multisrs  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs"  -osyn  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_mult.srs"  -log  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synlog\copiadora_multi_srs_gen.srr" 
 rc:0 success:1
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs|i|1525404262|2368
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_mult.srs|o|1525404264|2460
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synlog\copiadora_multi_srs_gen.srr|o|1525404264|376
+C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs|i|1525713658|2627
+C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_mult.srs|o|1525713661|2576
+C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synlog\copiadora_multi_srs_gen.srr|o|1525713661|521
 C:\ispLEVER_Classic2_0\synpbase\bin\syn_nfilter.exe|i|1401249136|2741760
 C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe|i|1401249332|6337536

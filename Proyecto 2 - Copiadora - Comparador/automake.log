@@ -1,10 +1,258 @@
 ispLEVER Auto-Make Log File
 ---------------------------
 
-Updating: Hierarchy
+Updating: Create Fuse Map
 Start to record tcl script...
 Finished recording TCL script.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\vhd2jhd.exe "programacomparador.vhd" -o "programacomparador.jhd" -m "C:\ispLEVER_Classic2_0\ispcpld/generic/lib/vhd/location.map" -p "C:\ispLEVER_Classic2_0\ispcpld/generic/lib"'
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\Synpwrap.exe -e copiadora -target ispGAL -pro '
 
+Copyright (c) 1991-2010 Lattice Semiconductor Corporation,  All rights reserved.
+Version : 2.0.00.17.20.15
+
+Done sucessfully with exit code 0.
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: C:\ispLEVER_Classic2_0\synpbase
+#OS: Windows 7 6.1
+#Hostname: EDUARDO-PC
+
+#Implementation: proyecto 2 - copiadora - comparador
+
+$ Start of Compile
+#Mon May 07 12:20:56 2018
+
+Synopsys VHDL Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: CD720 :"C:\ispLEVER_Classic2_0\synpbase\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":6:7:6:15|Top entity is set to copiadora.
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd changed - recompiling
+VHDL syntax check successful!
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd changed - recompiling
+@N: CD630 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":6:7:6:15|Synthesizing work.copiadora.comparador 
+Post processing for work.copiadora.comparador
+@W: CL159 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":8:2:8:3|Input A0 is unused
+@END
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon May 07 12:20:58 2018
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon May 07 12:21:01 2018
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+IBUF            10 uses
+OBUF            3 uses
+INV             14 uses
+AND2            13 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon May 07 12:21:03 2018
+
+###########################################################]
+
+Synplicity VHDL/Verilog HDL Synthesizer finished successfully
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\edif2blf.exe -edf "copiadora.edi" -out "copiadora.bl0" -err automake.err -log "copiadora.log" -prj proyecto2copiadora_comparador -lib "C:\ispLEVER_Classic2_0\ispcpld/dat/mach.edn" -cvt YES -net_Vcc VCC -net_GND G...'
+
+Starting EDIF2BLIF....
+readEDIF ended normally.
+
+EDIF2BLIF: Warning: Remove floating instance: :
+	A0
+
+Inspect circuit copiadora
+    Number of input ports   : 10
+    Number of output ports  : 3
+    Number of bidir ports   : 0
+    Number of instances     : 39
+    Number of nets          : 48
+
+No design errors found in circuit copiadora
+
+WriteBLIF ended normally.
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblifopt.exe "copiadora.bl0" -red bypin choose -collapse -pterms 8 -family -err automake.err -gui'
+
+BLIFOPT  Open-ABEL Optimizer 
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+U.C. Berkeley, SIS Ver. 1.0, supported by Lattice Semiconductor Corp.
+Reading Open-ABEL 2 file copiadora.bl0...
+Node A1_i has been collapsed.
+Node B1_i has been collapsed.
+Node A2_i has been collapsed.
+Node B2_i has been collapsed.
+Node A3_i has been collapsed.
+Node B3_i has been collapsed.
+Node N_10_i has been collapsed.
+Node B0_c_i has been collapsed.
+Node N_12_i has been collapsed.
+Node N_11_i has been collapsed.
+Node N_14_i has been collapsed.
+Node N_13_i has been collapsed.
+Node N_15_i has been collapsed.
+Node IA_c has been collapsed.
+Node SC_i has been collapsed.
+Node B0_c has been collapsed.
+Node B3_c has been collapsed.
+Node B1_c has been collapsed.
+Node A3_c has been collapsed.
+Node A2_c has been collapsed.
+Node A1_c has been collapsed.
+Node B2_c has been collapsed.
+Node N_10 has been collapsed.
+Node N_11 has been collapsed.
+Node N_12 has been collapsed.
+Node N_9_i_3 has been collapsed.
+Node N_9_i_4 has been collapsed.
+Node N_13 has been collapsed.
+Node N_15 has been collapsed.
+Node N_14 has been collapsed.
+Node N_9_i_1 has been collapsed.
+Node N_9_i_5 has been collapsed.
+Node N_9_i_2 has been collapsed.
+Node SC_c has been collapsed.
+Node SD_c has been collapsed.
+Node N_9_i has been collapsed.
+Performing 'bypin choose' optimization...
+Writing Open-ABEL 2 (BLIF) file copiadora.bl1...
+
+BLIFOPT complete - 0 errors, 0 warnings. Time: 2 seconds
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblflink.exe "copiadora.bl1" -o "proyecto2copiadora_comparador.bl2" -omod copiadora -family -err automake.err -gui'
+
+BLIFLINK  Top-Down Design Linker
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+
+Top-level file: 'copiadora.bl1'
+
+Hierarchical BLIF: 'proyecto2copiadora_comparador.bl2'
+
+BLIFLINK complete.  Time: 1 second 
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblifopt.exe proyecto2copiadora_comparador.bl2 -red bypin choose -sweep -collapse all -pterms 8 -err automake.err -gui'
+
+BLIFOPT  Open-ABEL Optimizer 
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+U.C. Berkeley, SIS Ver. 1.0, supported by Lattice Semiconductor Corp.
+Reading Open-ABEL 2 file proyecto2copiadora_comparador.bl2...
+Warning 13707:Unused pin 'A0' removed.
+Performing 'bypin choose' optimization...
+Writing Open-ABEL 2 (BLIF) file proyecto2copiadora_comparador.bl3...
+
+BLIFOPT complete - 0 errors, 1 warnings. Time: 1 seconds
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\idiofft.exe proyecto2copiadora_comparador.bl3 -pla -o proyecto2copiadora_comparador.tt2 -dev p22v10g -define N -err automake.err -gui'
+
+DIOFFT  Flip-Flop Transformation program
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Input file: proyecto2copiadora_comparador.bl3.
+Output file: proyecto2copiadora_comparador.tt2.
+Cross reference file: proyecto2copiadora_comparador.xrf.
+
+Shortening signal names...
+Writing signal name cross reference file proyecto2copiadora_comparador.xrf... 
+
+DIOFFT complete. - Time 1 seconds
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\fit.exe proyecto2copiadora_comparador.tt2 -dev p22v10g -str -err automake.err -gui'
+
+FIT  Generic Device Fitter
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Input file: 'proyecto2copiadora_comparador.tt2'
+Device 'p22v10g'
+Design FITS
+Pin-assigned pla: 'proyecto2copiadora_comparador.tt3'
+
+FIT complete.  Time: 1 second.
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\fuseasm.exe proyecto2copiadora_comparador.tt3 -dev p22v10g -o proyecto2copiadora_comparador.jed -ivec NoInput.tmv -rep proyecto2copiadora_comparador.rpt -doc brief -con ptblown -for brief -err automake.err -gui'
+
+FUSEASM  Fusemap Assembler
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Note 5144: Could not open vector file NoInput.tmv
+
+Input file: 'proyecto2copiadora_comparador.tt3'
+Device: 'P22V10G'
+Building model...
+Choosing best polarities...
+Mapping equations...
+.
+12 of 132 terms used; 0 vectors loaded
+Programmer load file: 'proyecto2copiadora_comparador.jed'
+Generating report...
+Report file: 'proyecto2copiadora_comparador.rpt'
+
+FUSEASM complete.  Time: 1 second 
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\synsvf.exe -exe "C:\ispLEVER_Classic2_0\ispvmsystem/ispufw" -prj proyecto2copiadora_comparador -if proyecto2copiadora_comparador.jed -j2s -log proyecto2copiadora_comparador.svl -gui'
+
+Need not generate svf file according to the constraints, exit
 Done: completed successfully.

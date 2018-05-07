@@ -1,20 +1,21 @@
-#$ DATE Thu May 03 22:24:30 2018
+#$ DATE Mon May 07 12:21:09 2018
 #$ TOOL EDIF2BLIF version IspLever 1.0 
 #$ MODULE copiadora
-#$ PINS 9 A0 A1 A2 A3 B0 B1 B2 B3 OT
-#$ NODES 32 N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i A2_i B2_i \
-#  A3_i B3_i A1_c A2_c A3_c B0_c B1_c B2_c B3_c B0_c_i \
-#  N_10_i N_11_i N_12_i N_13_i N_14_i N_15_i N_9_0 N_9_0_1 N_9_0_2 N_9_0_3 \
-#  N_9_0_4 N_9_0_5 
+#$ PINS 13 A0 A1 A2 A3 B0 B1 B2 B3 IA IB S0 SC SD
+#$ NODES 36 N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i A2_i B2_i \
+#  A3_i B3_i SC_i A1_c A2_c A3_c B0_c B1_c B2_c B3_c \
+#  IA_c SC_c SD_c N_9_i N_15_i N_13_i N_14_i N_11_i N_12_i B0_c_i \
+#  N_10_i N_9_i_1 N_9_i_2 N_9_i_3 N_9_i_4 N_9_i_5 
 .model copiadora
-.inputs A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF N_10.BLIF N_11.BLIF \
-  N_12.BLIF N_13.BLIF N_14.BLIF N_15.BLIF A1_i.BLIF B1_i.BLIF A2_i.BLIF B2_i.BLIF A3_i.BLIF \
-  B3_i.BLIF A1_c.BLIF A2_c.BLIF A3_c.BLIF B0_c.BLIF B1_c.BLIF B2_c.BLIF B3_c.BLIF B0_c_i.BLIF \
-  N_10_i.BLIF N_11_i.BLIF N_12_i.BLIF N_13_i.BLIF N_14_i.BLIF N_15_i.BLIF N_9_0.BLIF N_9_0_1.BLIF N_9_0_2.BLIF \
-  N_9_0_3.BLIF N_9_0_4.BLIF N_9_0_5.BLIF  
-.outputs OT N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i A2_i B2_i \
-  A3_i B3_i A1_c A2_c A3_c B0_c B1_c B2_c B3_c B0_c_i N_10_i \
-  N_11_i N_12_i N_13_i N_14_i N_15_i N_9_0 N_9_0_1 N_9_0_2 N_9_0_3 N_9_0_4 N_9_0_5
+.inputs A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF IA.BLIF IB.BLIF \
+  N_10.BLIF N_11.BLIF N_12.BLIF N_13.BLIF N_14.BLIF N_15.BLIF A1_i.BLIF B1_i.BLIF A2_i.BLIF \
+  B2_i.BLIF A3_i.BLIF B3_i.BLIF SC_i.BLIF A1_c.BLIF A2_c.BLIF A3_c.BLIF B0_c.BLIF B1_c.BLIF \
+  B2_c.BLIF B3_c.BLIF IA_c.BLIF SC_c.BLIF SD_c.BLIF N_9_i.BLIF N_15_i.BLIF N_13_i.BLIF N_14_i.BLIF \
+  N_11_i.BLIF N_12_i.BLIF B0_c_i.BLIF N_10_i.BLIF N_9_i_1.BLIF N_9_i_2.BLIF N_9_i_3.BLIF N_9_i_4.BLIF N_9_i_5.BLIF  
+.outputs S0 SC SD N_10 N_11 N_12 N_13 N_14 N_15 A1_i B1_i \
+  A2_i B2_i A3_i B3_i SC_i A1_c A2_c A3_c B0_c B1_c B2_c \
+  B3_c IA_c SC_c SD_c N_9_i N_15_i N_13_i N_14_i N_11_i N_12_i B0_c_i \
+  N_10_i N_9_i_1 N_9_i_2 N_9_i_3 N_9_i_4 N_9_i_5
 .names  A1.BLIF A1_c
 1 1
 .names  A2.BLIF A2_c
@@ -29,33 +30,45 @@
 1 1
 .names  B3.BLIF B3_c
 1 1
-.names  N_9_0.BLIF OT
+.names  IA.BLIF IA_c
 1 1
-.names  N_13_i.BLIF N_14_i.BLIF N_9_0_3
-11 1
-.names  N_9_0_1.BLIF N_9_0_2.BLIF N_9_0_4
-11 1
-.names  N_9_0_3.BLIF N_15_i.BLIF N_9_0_5
-11 1
-.names  N_9_0_4.BLIF N_9_0_5.BLIF N_9_0
-11 1
+.names  IB.BLIF SC_c
+1 1
+.names  N_9_i.BLIF S0
+1 1
+.names  SC_c.BLIF SC
+1 1
+.names  SD_c.BLIF SD
+1 1
+.names  N_11.BLIF N_11_i
+0 1
+.names  N_12.BLIF N_12_i
+0 1
 .names  B0_c.BLIF B0_c_i
 0 1
 .names  N_10.BLIF N_10_i
 0 1
-.names  N_11.BLIF N_11_i
-0 1
-.names  N_12.BLIF N_12_i
+.names  B0_c_i.BLIF N_10_i.BLIF N_9_i_1
+11 1
+.names  N_11_i.BLIF N_12_i.BLIF N_9_i_2
+11 1
+.names  N_13_i.BLIF N_14_i.BLIF N_9_i_3
+11 1
+.names  N_9_i_1.BLIF N_9_i_2.BLIF N_9_i_4
+11 1
+.names  N_9_i_3.BLIF N_15_i.BLIF N_9_i_5
+11 1
+.names  N_9_i_4.BLIF N_9_i_5.BLIF N_9_i
+11 1
+.names  N_15.BLIF N_15_i
 0 1
 .names  N_13.BLIF N_13_i
 0 1
 .names  N_14.BLIF N_14_i
 0 1
-.names  N_15.BLIF N_15_i
+.names  SC_c.BLIF SC_i
 0 1
-.names  B0_c_i.BLIF N_10_i.BLIF N_9_0_1
-11 1
-.names  N_11_i.BLIF N_12_i.BLIF N_9_0_2
+.names  IA_c.BLIF SC_i.BLIF SD_c
 11 1
 .names  B3_c.BLIF B3_i
 0 1

@@ -5,11 +5,11 @@ EDIF2BLIF: Warning: Remove floating instance: :
 	A0
 
 Inspect circuit copiadora
-    Number of input ports   : 8
-    Number of output ports  : 1
+    Number of input ports   : 10
+    Number of output ports  : 3
     Number of bidir ports   : 0
-    Number of instances     : 33
-    Number of nets          : 40
+    Number of instances     : 39
+    Number of nets          : 48
 
 No design errors found in circuit copiadora
 

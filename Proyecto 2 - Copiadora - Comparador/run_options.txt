@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03LC 
 #--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\run_options.txt
-#--  Written on Thu May 03 22:24:21 2018
+#--  Written on Mon May 07 12:20:55 2018
 
 
 #project files

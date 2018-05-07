@@ -1,7 +1,7 @@
 
 
                                                                       Page 1
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:12 2018
 
 
 
@@ -25,14 +25,14 @@ Output files:
 
 
                                                                       Page 2
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:12 2018
 
 P22V10G Programmed Logic:
 --------------------------------------------------------------------------------
 
 
 
-OT     = !(  B0 
+S0     = !(  B0 
           #   !A1 & B1 
           #   A1 & !B1 
           #   !A2 & B2 
@@ -40,10 +40,14 @@ OT     = !(  B0
           #   !A3 & B3 
           #   A3 & !B3 );
 
+SC     = (  IB );
+
+SD     = (  IA & !IB );
+
 
 
                                                                       Page 3
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:13 2018
 
 P22V10G Chip Diagram:
 --------------------------------------------------------------------------------
@@ -58,9 +62,9 @@ P22V10G Chip Diagram:
                          |           -----           |
                       A1 |  1                    24  | Vcc                     
                          |                           |
-                      A2 |  2                    23  | !OT                     
+                      A2 |  2                    23  | SD                      
                          |                           |
-                      A3 |  3                    22  |                         
+                      A3 |  3                    22  | !S0                     
                          |                           |
                       B0 |  4                    21  |                         
                          |                           |
@@ -70,13 +74,13 @@ P22V10G Chip Diagram:
                          |                           |
                       B3 |  7                    18  |                         
                          |                           |
-                         |  8                    17  |                         
+                      IA |  8                    17  |                         
                          |                           |
-                         |  9                    16  |                         
+                      IB |  9                    16  |                         
                          |                           |
                          | 10                    15  |                         
                          |                           |
-                         | 11                    14  |                         
+                         | 11                    14  | SC                      
                          |                           |
                      GND | 12                    13  |                         
                          |                           |
@@ -87,7 +91,7 @@ P22V10G Chip Diagram:
 
 
                                                                       Page 4
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:13 2018
 
 P22V10G Resource Allocations:
 --------------------------------------------------------------------------------
@@ -100,11 +104,11 @@ P22V10G Resource Allocations:
                       |           |             |
 Input Pins:           |           |             |
                       |           |             |
-          Input:      |     12    |      7      |    5 ( 41 %)
+          Input:      |     12    |      9      |    3 ( 25 %)
                       |           |             |
 Output Pins:          |           |             |
                       |           |             |
-          In/Out:     |     10    |      1      |    9 ( 90 %)
+          In/Out:     |     10    |      3      |    7 ( 70 %)
           Output:     |      -    |      -      |    -
                       |           |             |
 Buried Nodes:         |           |             |
@@ -115,7 +119,7 @@ Buried Nodes:         |           |             |
 
 
                                                                       Page 5
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:13 2018
 
 P22V10G Product Terms Distribution:
 --------------------------------------------------------------------------------
@@ -125,7 +129,9 @@ P22V10G Product Terms Distribution:
             Signal                       |    Pin   | Terms | Terms | Terms
              Name                        | Assigned | Used  |  Max  | Unused
 =========================================|==========|=======|=======|=======
-OT                                       |   23     |   7   |   8   |   1
+S0                                       |   22     |   7   |  10   |   3
+SC                                       |   14     |   1   |   8   |   7
+SD                                       |   23     |   1   |   8   |   7
 
 
      ==== List of Inputs/Feedbacks ====
@@ -139,10 +145,12 @@ B0                                       |    4     | INPUT
 B1                                       |    5     | INPUT
 B2                                       |    6     | INPUT
 B3                                       |    7     | INPUT
+IA                                       |    8     | INPUT
+IB                                       |    9     | INPUT
 
 
                                                                       Page 6
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 22:25:06 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon May 07 12:21:13 2018
 
 P22V10G Unused Resources:
 --------------------------------------------------------------------------------
@@ -152,12 +160,9 @@ P22V10G Unused Resources:
  Pin   |  Pin   |   Product   | Flip-flop
 Number |  Type  |   Terms     |   Type
 =======|========|=============|==========
-    8  |  INPUT |      -      |    -   
-    9  |  INPUT |      -      |    -   
    10  |  INPUT |      -      |    -   
    11  |  INPUT |      -      |    -   
    13  |  INPUT |      -      |    -   
-   14  |  BIDIR | NORMAL  8   |    D
    15  |  BIDIR | NORMAL 10   |    D
    16  |  BIDIR | NORMAL 12   |    D
    17  |  BIDIR | NORMAL 14   |    D
@@ -165,4 +170,3 @@ Number |  Type  |   Terms     |   Type
    19  |  BIDIR | NORMAL 16   |    D
    20  |  BIDIR | NORMAL 14   |    D
    21  |  BIDIR | NORMAL 12   |    D
-   22  |  BIDIR | NORMAL 10   |    D

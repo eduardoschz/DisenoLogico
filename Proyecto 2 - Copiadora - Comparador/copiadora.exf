@@ -1,5 +1,5 @@
 Section Cross Reference File
-Design 'copiadora' created Thu May 03 22:24:30 2018
+Design 'copiadora' created Mon May 07 12:21:09 2018
    Type              New Name                               Original Name
 // ----------------------------------------------------------------------
 End
@@ -13,5 +13,9 @@ Section Type      Name
         Input     B1
         Input     B2
         Input     B3
-        Output     OT
+        Input     IA
+        Input     IB
+        Output     S0
+        Output     SC
+        Output     SD
 End

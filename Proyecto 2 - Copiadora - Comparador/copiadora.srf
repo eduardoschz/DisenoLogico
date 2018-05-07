@@ -6,7 +6,7 @@
 #Implementation: proyecto 2 - copiadora - comparador
 
 $ Start of Compile
-#Thu May 03 22:24:21 2018
+#Mon May 07 12:20:56 2018
 
 Synopsys VHDL Compiler, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
@@ -14,25 +14,28 @@ Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated document
 
 @N: CD720 :"C:\ispLEVER_Classic2_0\synpbase\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
 @N:"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":6:7:6:15|Top entity is set to copiadora.
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd changed - recompiling
 VHDL syntax check successful!
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd changed - recompiling
 @N: CD630 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":6:7:6:15|Synthesizing work.copiadora.comparador 
 Post processing for work.copiadora.comparador
 @W: CL159 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":8:2:8:3|Input A0 is unused
 @END
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 03 22:24:22 2018
+# Mon May 07 12:20:58 2018
 
 ###########################################################]
 Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
+File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 03 22:24:24 2018
+# Mon May 07 12:21:01 2018
 
 ###########################################################]
 Map & Optimize Report
@@ -45,10 +48,10 @@ Product Version I-2014.03LC
 Resource Usage Report
 
 Simple gate primitives:
-IBUF            8 uses
-OBUF            1 use
-AND2            12 uses
-INV             13 uses
+IBUF            10 uses
+OBUF            3 uses
+INV             14 uses
+AND2            13 uses
 
 
 @N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
@@ -58,6 +61,6 @@ Mapper successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 03 22:24:25 2018
+# Mon May 07 12:21:03 2018
 
 ###########################################################]

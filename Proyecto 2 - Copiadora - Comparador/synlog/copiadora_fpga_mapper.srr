@@ -6,10 +6,10 @@ Product Version I-2014.03LC
 Resource Usage Report
 
 Simple gate primitives:
-IBUF            8 uses
-OBUF            1 use
-AND2            12 uses
-INV             13 uses
+IBUF            10 uses
+OBUF            3 uses
+INV             14 uses
+AND2            13 uses
 
 
 @N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
@@ -19,6 +19,6 @@ Mapper successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 03 22:24:25 2018
+# Mon May 07 12:21:03 2018
 
 ###########################################################]
