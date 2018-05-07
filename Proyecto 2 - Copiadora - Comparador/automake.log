@@ -1,17 +1,10 @@
 ispLEVER Auto-Make Log File
 ---------------------------
 
-Updating: Linked Equations
+Updating: Hierarchy
 Start to record tcl script...
 Finished recording TCL script.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\blif2eqn.exe "proyecto2copiadora_comparador.bl2" -o "proyecto2copiadora_comparador.eq2" -err automake.err'
-
-BLIF2EQN  Open-ABEL Report Generator
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\vhd2jhd.exe "programacomparador.vhd" -o "programacomparador.jhd" -m "C:\ispLEVER_Classic2_0\ispcpld/generic/lib/vhd/location.map" -p "C:\ispLEVER_Classic2_0\ispcpld/generic/lib"'
 
 Done: completed successfully.
