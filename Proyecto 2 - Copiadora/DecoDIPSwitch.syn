@@ -4,6 +4,7 @@ PROJECT Proyecto2Copiadora
 DESIGN decodipswitch Normal
 DEVKIT GAL22V10D-10LP
 ENTRY Pure VHDL
+MODULE comparador.vhd
 MODULE deco - dipswitch.vhd
 MODSTYLE unam Normal
 SYNTHESIS_TOOL Synplify

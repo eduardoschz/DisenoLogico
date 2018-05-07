@@ -1,18 +1,19 @@
+
 [Device]
-Family=plsiGal;
-PartNumber=GAL22V10D-10LP;
-Package=24PDIP;
-PartType=GAL22V10D;
-Speed=-10;
-Operating_condition=COM;
-Status=Obsolete;
+Family = plsiGal;
+PartNumber = GAL22V10D-10LP;
+Package = 24PDIP;
+PartType = GAL22V10D;
+Speed = -10;
+Operating_condition = COM;
+Status = Obsolete;
 
 [Revision]
-Parent=plsigal.lci;
-DATE=05/02/2018;
-TIME=21:58:22;
-Source_Format=Pure_VHDL;
-Synthesis=Synplify;
+Parent = plsigal.lci;
+DATE = 05/02/2018;
+TIME = 21:58:22;
+Source_Format = Pure_VHDL;
+Synthesis = Synplify;
 
 [Ignore Assignments]
 
@@ -23,13 +24,13 @@ Synthesis=Synplify;
 [Global Constraints]
 
 [Location Assignments]
-Layer = Off;
+layer = OFF;
 
 [Group Assignments]
-Layer = Off;
+layer = OFF;
 
 [Resource Reservations]
-Layer = Off;
+layer = OFF;
 
 [Fitter Report Format]
 
@@ -46,7 +47,7 @@ Layer = Off;
 [Netlist/Delay Format]
 
 [IO Types]
-Layer = off;
+layer = OFF;
 
 [Pullup]
 
@@ -59,5 +60,3 @@ Layer = off;
 [HSI Attributes]
 
 [Input Delay]
-
-

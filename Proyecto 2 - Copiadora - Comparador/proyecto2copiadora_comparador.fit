@@ -1,5 +1,5 @@
 $DEVICE         p22v10g    fit proyecto2copiadora_comparador.tt3
-$PINS   12  SD:23   SC:14   S0:22   IB:9   IA:8   B3:7   B2:6   
-B1:5   B0:4   A3:3   A2:2   A1:1   
+$PINS   13  SD:23   SC:14   S0:22   IB:10   IA:9   B3:8   B2:7   
+B1:6   B0:5   A3:4   A2:3   A1:2   A0:1   
 --------------------------------------------------------------
 
