@@ -15,12 +15,13 @@ entity copiadora is
 		B2 : in bit;
 		B3 : in bit;
 
-		IA : in bit; --Entradas para el control
-		IB : in bit; 
+		S : in bit; --Entradas para el control
+		AB : in bit; 
 
-		S0 : out bit;	--Salida del comparador
-		SC : out bit;	--Salidas para el control
-		SD : out bit
+		EQ : out bit;	--Salida del comparador
+
+		EN : out bit;	--Salidas para el control
+		RS : out bit
 );
 		
 
@@ -46,9 +47,10 @@ begin
 --		(((A0) and (A1) and (A2) and (not A3)) AND ((not B0) and (B1) and (B2) and (not B3))) or
 --		(((A0) and (A1) and (A2) and (A3)) AND ((not B0) and (B1) and (B2) and (B3))));
 
-	S0 <= not((A3 and (not B3)) or (A2 and (not B2)) or (A1 and (not B1)) or (A0 and (not B0)) or ((not A3) and B3) or ((not A2) and B2) or ((not A1) and B1) or ((not A0) and B0));
-	SC <= IB;
-	SD <= IA and (not IB);
+	EQ <= not((A3 and (not B3)) or (A2 and (not B2)) or (A1 and (not B1)) or (A0 and (not B0)) or ((not A3) and B3) or ((not A2) and B2) or ((not A1) and B1) or ((not A0) and B0));
+	EN <= S and (not AB);
+	RS <= (not S) and AB;
+		
 	
 
 end comparador;

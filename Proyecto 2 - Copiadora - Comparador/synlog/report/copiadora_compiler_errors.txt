@@ -1,3 +1,3 @@
-@E: CD255 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":49:69:49:69|No identifier "n0" in scope
+@E: CD184 :"C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd":53:4:53:5|target ab of assignment is not writeable
 @E|Parse errors encountered - exiting
 

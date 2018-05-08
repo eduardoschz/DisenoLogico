@@ -6,7 +6,7 @@
 #Implementation: proyecto 2 - copiadora - comparador
 
 $ Start of Compile
-#Mon May 07 13:30:47 2018
+#Tue May 08 13:36:35 2018
 
 Synopsys VHDL Compiler, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
@@ -23,17 +23,17 @@ Post processing for work.copiadora.comparador
 At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon May 07 13:30:47 2018
+# Tue May 08 13:36:35 2018
 
 ###########################################################]
 Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
 File C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs changed - recompiling
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon May 07 13:30:49 2018
+# Tue May 08 13:36:38 2018
 
 ###########################################################]
 Map & Optimize Report
@@ -48,17 +48,17 @@ Resource Usage Report
 Simple gate primitives:
 IBUF            10 uses
 OBUF            3 uses
-AND2            16 uses
-INV             17 uses
+AND2            17 uses
+INV             18 uses
 
 
 @N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
 I-2014.03LC 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon May 07 13:30:49 2018
+# Tue May 08 13:36:40 2018
 
 ###########################################################]
