@@ -1,7 +1,7 @@
 
 
                                                                       Page 1
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:56 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 
 
@@ -25,36 +25,36 @@ Output files:
 
 
                                                                       Page 2
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:56 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 P22V10G Programmed Logic:
 --------------------------------------------------------------------------------
 
 
 
-D     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & N8 & !N9 );
+D     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N6 & !N7 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 
+         #   !N0 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 );
 
-C     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & N6 & !N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & N5 & !N6 & !N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & !N3 & N4 & !N5 & !N6 & !N7 & !N8 & !N9 );
+C     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N7 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 
+         #   !N0 & !N1 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 );
 
-B     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & N6 & !N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 
-         #   !N0 & !N1 & N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 );
+B     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N7 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N6 & !N7 & !N8 & !N9 
+         #   !N0 & !N1 & !N2 & !N3 & !N5 & !N6 & !N7 & !N8 & !N9 );
 
-A     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & !N3 & !N4 & N5 & !N6 & !N7 & !N8 & !N9 
-         #   !N0 & !N1 & !N2 & N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 
-         #   !N0 & N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 & !N9 );
+A     = (  !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N8 
+         #   !N0 & !N1 & !N2 & !N3 & !N4 & !N5 & !N6 & !N7 & !N9 );
 
 
 
                                                                       Page 3
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:57 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 P22V10G Chip Diagram:
 --------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ P22V10G Chip Diagram:
 
 
                                                                       Page 4
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:57 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 P22V10G Resource Allocations:
 --------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ Buried Nodes:         |           |             |
 
 
                                                                       Page 5
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:57 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 P22V10G Product Terms Distribution:
 --------------------------------------------------------------------------------
@@ -136,10 +136,10 @@ P22V10G Product Terms Distribution:
             Signal                       |    Pin   | Terms | Terms | Terms
              Name                        | Assigned | Used  |  Max  | Unused
 =========================================|==========|=======|=======|=======
-D                                        |   15     |   2   |  10   |   8
+D                                        |   15     |   5   |  10   |   5
 C                                        |   22     |   4   |  10   |   6
 B                                        |   14     |   4   |   8   |   4
-A                                        |   23     |   5   |   8   |   3
+A                                        |   23     |   2   |   8   |   6
 
 
      ==== List of Inputs/Feedbacks ====
@@ -159,7 +159,7 @@ N9                                       |   10     | INPUT
 
 
                                                                       Page 6
-ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Thu May 03 21:18:57 2018
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Wed May 09 12:47:30 2018
 
 P22V10G Unused Resources:
 --------------------------------------------------------------------------------

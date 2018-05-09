@@ -1,243 +1,36 @@
 ispLEVER Auto-Make Log File
 ---------------------------
 
-Updating: Functional Simulation
+Updating: Create Fuse Map
 Start to record tcl script...
 Finished recording TCL script.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\Synpwrap.exe -e unam -target ispGAL -pro '
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\fuseasm.exe decodipswitch.tt3 -dev p22v10g -o decodipswitch.jed -ivec NoInput.tmv -rep decodipswitch.rpt -doc brief -con ptblown -for brief -err automake.err -gui'
 
-Copyright (c) 1991-2010 Lattice Semiconductor Corporation,  All rights reserved.
-Version : 2.0.00.17.20.15
-
-Done sucessfully with exit code 0.
-#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
-#install: C:\ispLEVER_Classic2_0\synpbase
-#OS: Windows 7 6.1
-#Hostname: EDUARDO-PC
-
-#Implementation: proyecto 2 - copiadora
-
-$ Start of Compile
-#Wed May 09 12:43:34 2018
-
-Synopsys VHDL Compiler, version comp201403rcp1, Build 060R, built May 27 2014
-@N|Running in 64-bit mode
-Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
-
-@N: CD720 :"C:\ispLEVER_Classic2_0\synpbase\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
-@N:"C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\deco - dipswitch.vhd":6:7:6:10|Top entity is set to unam.
-File C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\deco - dipswitch.vhd changed - recompiling
-VHDL syntax check successful!
-File C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\deco - dipswitch.vhd changed - recompiling
-@N: CD630 :"C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\deco - dipswitch.vhd":6:7:6:10|Synthesizing work.unam.aragon 
-Post processing for work.unam.aragon
-@END
-
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed May 09 12:43:34 2018
-
-###########################################################]
-Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
-@N|Running in 64-bit mode
-File C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synwork\unam_comp.srs changed - recompiling
-
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed May 09 12:43:36 2018
-
-###########################################################]
-Map & Optimize Report
-
-Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
-Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
-Product Version I-2014.03LC 
-@N: MF248 |Running in 64-bit mode.
----------------------------------------
-Resource Usage Report
-
-Simple gate primitives:
-IBUF            10 uses
-OBUF            4 uses
-AND2            39 uses
-INV             29 uses
-
-
-@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
-I-2014.03LC 
-Mapper successful!
-
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed May 09 12:43:37 2018
-
-###########################################################]
-
-Synplicity VHDL/Verilog HDL Synthesizer finished successfully
-
-Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\edif2blf.exe -edf "unam.edi" -out "unam.bl0" -err automake.err -log "unam.log" -prj decodipswitch -lib "C:\ispLEVER_Classic2_0\ispcpld/dat/mach.edn" -cvt YES -net_Vcc VCC -net_GND GND -nbx -dse -tlw'
-
-Starting EDIF2BLIF....
-readEDIF ended normally.
-
-Inspect circuit unam
-    Number of input ports   : 10
-    Number of output ports  : 4
-    Number of bidir ports   : 0
-    Number of instances     : 82
-    Number of nets          : 92
-
-No design errors found in circuit unam
-
-WriteBLIF ended normally.
-
-Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblifopt.exe "unam.bl0" -o "unam.blo" -red bypin choose -collapse -pterms 8 -family -err automake.err -gui'
-
-BLIFOPT  Open-ABEL Optimizer 
+FUSEASM  Fusemap Assembler
 ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
 Portions Copyright(c), 1992-1999, Vantis Corporation
 Portions Copyright(C), 1993-1998, Data I/O Corporation
 Portions Copyright(C), 1997-1998, MINC Washington Corporation
 Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-U.C. Berkeley, SIS Ver. 1.0, supported by Lattice Semiconductor Corp.
-Reading Open-ABEL 2 file unam.bl0...
-Node N_10 has been collapsed.
-Node N_11 has been collapsed.
-Node N_12 has been collapsed.
-Node N_13 has been collapsed.
-Node N_14 has been collapsed.
-Node N8_i has been collapsed.
-Node N7_i has been collapsed.
-Node N0_c has been collapsed.
-Node N1_c has been collapsed.
-Node N4_c has been collapsed.
-Node N5_c has been collapsed.
-Node N_30_i has been collapsed.
-Node N_32_i has been collapsed.
-Node N_38_i has been collapsed.
-Node N_29_i has been collapsed.
-Node N_31_i has been collapsed.
-Node N_37_i has been collapsed.
-Node N_23_i has been collapsed.
-Node N_27_i has been collapsed.
-Node N_26_i has been collapsed.
-Node N_25_i has been collapsed.
-Node N9_i has been collapsed.
-Node N2_i has been collapsed.
-Node N_24_i has been collapsed.
-Node N6_i has been collapsed.
-Node N3_i has been collapsed.
-Node N4_i has been collapsed.
-Node N1_i has been collapsed.
-Node N0_i has been collapsed.
-Node N7_c has been collapsed.
-Node N8_c has been collapsed.
-Node N_23_2 has been collapsed.
-Node A_c_2 has been collapsed.
-Node N_13_0 has been collapsed.
-Node N_14_0 has been collapsed.
-Node N_24_2 has been collapsed.
-Node N_24_1 has been collapsed.
-Node N_11_0_1 has been collapsed.
-Node N_25_2 has been collapsed.
-Node N_26 has been collapsed.
-Node N_27_1 has been collapsed.
-Node N_29 has been collapsed.
-Node N_30 has been collapsed.
-Node N_27_2 has been collapsed.
-Node N_26_1 has been collapsed.
-Node N_12_0 has been collapsed.
-Node D_c_0 has been collapsed.
-Node N_10_0 has been collapsed.
-Node C_c_0 has been collapsed.
-Node N_26_2 has been collapsed.
-Node N9_c has been collapsed.
-Node N6_c has been collapsed.
-Node N3_c has been collapsed.
-Node N2_c has been collapsed.
-Node N_31 has been collapsed.
-Node N_38 has been collapsed.
-Node N_37 has been collapsed.
-Node N_32 has been collapsed.
-Node N_33 has been collapsed.
-Node N5_i has been collapsed.
-Node N_11_0 has been collapsed.
-Node N_23_1 has been collapsed.
-Node A_c_1 has been collapsed.
-Node N_12_0_1 has been collapsed.
-Node N_25 has been collapsed.
-Node N_36 has been collapsed.
-Node N_25_1 has been collapsed.
-Node N_35 has been collapsed.
-Node N_34 has been collapsed.
-Node A_c_3 has been collapsed.
-Node N_23 has been collapsed.
-Node B_c_0 has been collapsed.
-Node N_27 has been collapsed.
-Node N_24 has been collapsed.
-Node D_c has been collapsed.
-Node C_c has been collapsed.
-Node B_c has been collapsed.
-Node A_c has been collapsed.
-Performing 'bypin choose' optimization...
-Writing Open-ABEL 2 (BLIF) file unam.blo...
+Note 5144: Could not open vector file NoInput.tmv
 
-BLIFOPT complete - 0 errors, 0 warnings. Time: 3 seconds
+Input file: 'decodipswitch.tt3'
+Device: 'P22V10G'
+Building model...
+Choosing best polarities...
+Mapping equations...
+.
+19 of 132 terms used; 0 vectors loaded
+Programmer load file: 'decodipswitch.jed'
+Generating report...
+Report file: 'decodipswitch.rpt'
+
+FUSEASM complete.  Time: 1 second 
 
 Done: completed successfully.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblflink.exe "unam.blo" -o "unam.blh" -omod unam -err automake.err -gui'
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\synsvf.exe -exe "C:\ispLEVER_Classic2_0\ispvmsystem/ispufw" -prj decodipswitch -if decodipswitch.jed -j2s -log decodipswitch.svl -gui'
 
-BLIFLINK  Top-Down Design Linker
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-
-Top-level file: 'unam.blo'
-
-Hierarchical BLIF: 'unam.blh'
-
-BLIFLINK complete.  Time: 1 second 
-
+Need not generate svf file according to the constraints, exit
 Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\syndos iblifopt "unam.blh" -o "unam.bli" -err automake.err -gui'
-
-BLIFOPT  Open-ABEL Optimizer 
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-U.C. Berkeley, SIS Ver. 1.0, supported by Lattice Semiconductor Corp.
-
-Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\idiofft.exe -i "unam.bli" -o "unam.blj" -idev PLSI -propadd -dev pla_basic -err automake.err -gui'
-
-DIOFFT  Flip-Flop Transformation program
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-Input file: unam.bli.
-Output file: unam.blj.
-
-
-DIOFFT complete. - Time 0 seconds
-
-Done: completed successfully.
-
-Launching: 'C:\ispLEVER_Classic2_0\ispcpld\bin\simcp.exe @simcp._sp'
-
