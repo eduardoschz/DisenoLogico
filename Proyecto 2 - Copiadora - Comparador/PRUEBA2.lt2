@@ -1,0 +1,58 @@
+// Lattice TS Stimulus Data from the Waveform Editor
+NETWORK copiadora
+MODULE copiadora
+XRESET_SIGNAL !XRESET 0@0ns 1@0ns
+XRESET_SIGNAL XRESET 0@0ns 1@0ns
+VECTOR XTEST_OE PATTERN 1#0ns
+
+
+// Create Dummy Wires to Connect to signals
+
+
+
+// Code for all top level Inputs and BiDirs, etc.
+
+
+VECTOR A0 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+VECTOR A1 PATTERN 1*(\
+ 0#0ps,\
+ 1#17000ps,\
+  1#23000ps   )
+
+VECTOR A2 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+VECTOR A3 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+VECTOR B0 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+VECTOR B1 PATTERN 1*(\
+ 0#0ps,\
+ 1#21000ps,\
+  1#19000ps   )
+
+VECTOR B2 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+VECTOR B3 PATTERN 1*(\
+ 1#0ps,\
+  1#40000ps   )
+
+
+
+FTRACE(prueba2.TRA, "%12t: %b%b%b%b%b%b%b%b%b%b->%b%b%b", $time, AB, S, B3, B2, B1, B0, A3, A2, A1, A0, RS, EN, EQ);
+SET INTERNAL_ONLY_ALL_SET$$ [RS,EN,EQ,AB,S,B3,B2,B1,B0,A3,A2,A1,A0]
+BREAK IF INTERNAL_ONLY_ALL_SET$$->? DO PRINT
+
+RUN
+
+ÿ
