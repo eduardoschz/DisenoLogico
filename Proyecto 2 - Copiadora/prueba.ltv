@@ -1,0 +1,83 @@
+// Lattice TS Stimulus Data from the Waveform Editor
+NETWORK unam
+MODULE unam
+XRESET_SIGNAL !XRESET 0@0ns 1@0ns
+XRESET_SIGNAL XRESET 0@0ns 1@0ns
+VECTOR XTEST_OE PATTERN 1#0ns
+
+
+// Create Dummy Wires to Connect to signals
+
+
+
+// Code for all top level Inputs and BiDirs, etc.
+
+
+VECTOR N0 PATTERN 1*(\
+ 0#0ps,\
+ 1#110000ps,\
+ 0#10000ps,\
+  0#20000ps   )
+
+VECTOR N1 PATTERN 1*(\
+ 0#0ps,\
+ 1#100000ps,\
+ 0#10000ps,\
+  0#30000ps   )
+
+VECTOR N2 PATTERN 1*(\
+ 0#0ps,\
+ 1#90000ps,\
+ 0#10000ps,\
+  0#40000ps   )
+
+VECTOR N3 PATTERN 1*(\
+ 0#0ps,\
+ 1#80000ps,\
+ 0#10000ps,\
+  0#50000ps   )
+
+VECTOR N4 PATTERN 1*(\
+ 0#0ps,\
+ 1#70000ps,\
+ 0#10000ps,\
+  0#60000ps   )
+
+VECTOR N5 PATTERN 1*(\
+ 0#0ps,\
+ 1#60000ps,\
+ 0#10000ps,\
+  0#70000ps   )
+
+VECTOR N6 PATTERN 1*(\
+ 0#0ps,\
+ 1#50000ps,\
+ 0#10000ps,\
+  0#80000ps   )
+
+VECTOR N7 PATTERN 1*(\
+ 0#0ps,\
+ 1#40000ps,\
+ 0#10000ps,\
+  0#90000ps   )
+
+VECTOR N8 PATTERN 1*(\
+ 0#0ps,\
+ 1#30000ps,\
+ 0#10000ps,\
+  0#100000ps   )
+
+VECTOR N9 PATTERN 1*(\
+ 0#0ps,\
+ 1#20000ps,\
+ 0#10000ps,\
+  0#110000ps   )
+
+
+
+FTRACE(prueba.TRA, "%12t: %b%b%b%b%b%b%b%b%b%b->%b%b%b%b", $time, N9, N8, N7, N6, N5, N4, N3, N2, N1, N0, A, B, C, D);
+SET INTERNAL_ONLY_ALL_SET$$ [A,B,C,D,N9,N8,N7,N6,N5,N4,N3,N2,N1,N0]
+BREAK IF INTERNAL_ONLY_ALL_SET$$->? DO PRINT
+
+RUN
+

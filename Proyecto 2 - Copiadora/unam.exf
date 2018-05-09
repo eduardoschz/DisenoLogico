@@ -1,12 +1,7 @@
 Section Cross Reference File
-Design 'unam' created Wed May 02 22:25:56 2018
+Design 'unam' created Wed May 09 12:43:42 2018
    Type              New Name                               Original Name
 // ----------------------------------------------------------------------
-   Inst       un16_d_0_a2_1_0_                          un16_d_0_a2_1[0]
-   Inst         un16_d_0_a2_0_                            un16_d_0_a2[0]
-   Inst         un16_d_0_x2_0_                            un16_d_0_x2[0]
-   Net             un16_d_0__n                                 un16_d[0]
-   Net           un16_d_1_0__n                               un16_d_1[0]
 End
 Section Type      Name
 // ----------------------------------------------------------------------

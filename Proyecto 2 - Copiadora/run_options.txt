@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03LC 
-#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\run_options.txt
-#--  Written on Wed May 02 22:21:34 2018
+#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\run_options.txt
+#--  Written on Wed May 09 12:43:34 2018
 
 
 #project files
@@ -52,5 +52,5 @@ set_option -write_apr_constraint 1
 project -result_file "./unam.edi"
 
 #set log file 
-set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/dl/proyecto 2 - copiadora/unam.srf" 
+set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/disenologico/proyecto 2 - copiadora/unam.srf" 
 impl -active "proyecto 2 - copiadora"

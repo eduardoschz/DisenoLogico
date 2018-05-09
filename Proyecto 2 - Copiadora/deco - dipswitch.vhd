@@ -25,24 +25,24 @@ end;
  
 architecture aragon of unam is
 begin
-	D <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (N8) and  (not N9)) OR
-	     ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (N9));
+	A <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and (not N8)) OR
+	     ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N9));
 
-	C <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (N7) and  (not N8) and  (not N9));
+	B <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N8) and  (not N9)) OR
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N7) and  (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9));
 
-	B <= ((not N0) and  (not N1) and  (N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR 
-             ((not N0) and  (not N1) and  (not N2) and  (N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (N7) and  (not N8) and  (not N9));
+	C <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N8) and  (not N9)) OR 
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N7) and  (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N2) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9));
 
-	A <= ((not N0) and  (N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR 
-             ((not N0) and  (not N1) and  (not N2) and  (N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (N5) and  (not N6) and  (not N7) and  (not N8) and  (not N9)) OR  
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (N7) and  (not N8) and  (not N9)) OR 
-             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and  (not N8) and  (N9));
+	D <= ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and (not N7) and  (not N8)) OR 
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N2) and  (not N3) and  (not N4) and  (not N6) and  (not N7) and (not N8) and  (not N9)) OR  
+             ((not N0) and  (not N1) and  (not N2) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and (not N8) and  (not N9)) OR 
+             ((not N0) and  (not N2) and  (not N3) and  (not N4) and  (not N5) and  (not N6) and  (not N7) and (not N8) and  (not N9));
 	
 
 end aragon;

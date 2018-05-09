@@ -1,2 +1,2 @@
 simcp.pre1 -ini simcpls.ini -unit simcp.pre1
--cfg "oaig_pvhd.fdk" test0.ltv -map "unam.lsi"
+-cfg "oaig_pvhd.fdk" prueba.ltv -map "unam.lsi"

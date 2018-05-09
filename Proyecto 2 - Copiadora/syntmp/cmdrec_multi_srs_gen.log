@@ -1,7 +1,7 @@
-C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  unam  -multisrs  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synwork\unam_comp.srs"  -osyn  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synwork\unam_mult.srs"  -log  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synlog\unam_multi_srs_gen.srr" 
+C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  unam  -multisrs  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synwork\unam_comp.srs"  -osyn  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synwork\unam_mult.srs"  -log  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synlog\unam_multi_srs_gen.srr" 
 rc:0 success:1
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synwork\unam_comp.srs|i|1525317695|2726
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synwork\unam_mult.srs|o|1525317696|2594
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora\synlog\unam_multi_srs_gen.srr|o|1525317696|503
+C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synwork\unam_comp.srs|i|1525887814|2672
+C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synwork\unam_mult.srs|o|1525887816|2598
+C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora\synlog\unam_multi_srs_gen.srr|o|1525887816|513
 C:\ispLEVER_Classic2_0\synpbase\bin\syn_nfilter.exe|i|1401249136|2741760
 C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe|i|1401249332|6337536
