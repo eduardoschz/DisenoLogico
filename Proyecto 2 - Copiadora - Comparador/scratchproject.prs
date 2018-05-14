@@ -1,14 +1,14 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03LC 
-#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\scratchproject.prs
+#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\scratchproject.prs
 
 #project files
-add_file -vhdl -lib work "C:/users/eduardo sanchez/documents/facultad/2018-2/dl/proyecto 2 - copiadora - comparador/programacomparador.vhd"
+add_file -vhdl -lib work "C:/users/eduardo sanchez/documents/facultad/2018-2/disenologico/proyecto 2 - copiadora - comparador/programacomparador.vhd"
 
 
 
 #implementation: "proyecto 2 - copiadora - comparador"
-impl -add "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador" -type fpga
+impl -add "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador" -type fpga
 
 #device options
 set_option -technology ispGAL
@@ -47,8 +47,8 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/users/eduardo sanchez/documents/facultad/2018-2/dl/proyecto 2 - copiadora - comparador/copiadora.edi"
+project -result_file "C:/users/eduardo sanchez/documents/facultad/2018-2/disenologico/proyecto 2 - copiadora - comparador/copiadora.edi"
 
 #set log file 
-set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/dl/proyecto 2 - copiadora - comparador/copiadora.srf" 
+set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/disenologico/proyecto 2 - copiadora - comparador/copiadora.srf" 
 impl -active "proyecto 2 - copiadora - comparador"

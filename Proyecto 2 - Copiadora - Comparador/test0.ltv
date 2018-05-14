@@ -1,0 +1,69 @@
+// Lattice TS Stimulus Data from the Waveform Editor
+NETWORK copiadora
+MODULE copiadora
+XRESET_SIGNAL !XRESET 0@0ns 1@0ns
+XRESET_SIGNAL XRESET 0@0ns 1@0ns
+VECTOR XTEST_OE PATTERN 1#0ns
+
+
+// Create Dummy Wires to Connect to signals
+
+
+
+// Code for all top level Inputs and BiDirs, etc.
+
+
+VECTOR A(3) PATTERN 1*(\
+ 1#0ps,\
+ 0#15000ps,\
+ 1#14500ps,\
+  1#33500ps   )
+
+VECTOR A(2) PATTERN 1*(\
+ 1#0ps,\
+  1#55500ps   )
+
+VECTOR A(1) PATTERN 1*(\
+ 1#0ps,\
+ 0#16000ps,\
+ 1#11000ps,\
+  1#22500ps   )
+
+VECTOR A(0) PATTERN 1*(\
+ 1#0ps,\
+ 0#16000ps,\
+ 1#8500ps,\
+  1#24500ps   )
+
+VECTOR B(3) PATTERN 1*(\
+ 1#0ps,\
+ 0#19500ps,\
+ 1#5500ps,\
+  1#25500ps   )
+
+VECTOR B(2) PATTERN 1*(\
+ 1#0ps,\
+ 0#16500ps,\
+ 1#11000ps,\
+  1#25500ps   )
+
+VECTOR B(1) PATTERN 1*(\
+ 1#0ps,\
+ 0#14000ps,\
+ 1#19500ps,\
+  1#19000ps   )
+
+VECTOR B(0) PATTERN 1*(\
+ 1#0ps,\
+ 0#15500ps,\
+ 1#10000ps,\
+  1#24500ps   )
+
+
+
+FTRACE(test0.TRA, "%12t: %b%b%b%b%b%b%b%b->%b%b%b", $time, B(0), B(1), B(2), B(3), A(0), A(1), A(2), A(3), Menor, Igual, Mayor);
+SET INTERNAL_ONLY_ALL_SET$$ [Menor,Igual,Mayor,B(0),B(1),B(2),B(3),A(0),A(1),A(2),A(3)]
+BREAK IF INTERNAL_ONLY_ALL_SET$$->? DO PRINT
+
+RUN
+

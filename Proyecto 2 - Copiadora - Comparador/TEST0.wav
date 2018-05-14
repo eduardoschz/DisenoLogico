@@ -1,0 +1,16 @@
+[NameRules]
+InstanceSeparator=^
+
+[Waves]
+Count=11
+Net0=MENOR
+Net1=IGUAL
+Net2=MAYOR
+Net3=B[0]
+Net4=B[1]
+Net5=B[2]
+Net6=B[3]
+Net7=A[0]
+Net8=A[1]
+Net9=A[2]
+Net10=A[3]

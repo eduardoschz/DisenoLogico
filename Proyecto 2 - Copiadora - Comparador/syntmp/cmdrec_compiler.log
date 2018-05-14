@@ -1,13 +1,13 @@
-C:\ispLEVER_Classic2_0\synpbase\bin64\c_vhdl.exe  -osyn  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs"  -top  copiadora  -prodtype  synplify_pro  -nostructver -dfltencoding sequential -encrypt  -pro  -dmgen  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\dm"  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib  -lib work "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\programacomparador.vhd" -loga  "C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\copiadora.srr" 
+C:\ispLEVER_Classic2_0\synpbase\bin64\c_vhdl.exe  -osyn  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs"  -top  copiadora  -prodtype  synplify_pro  -nostructver -dfltencoding sequential -encrypt  -pro  -dmgen  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\dm"  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib  -lib work "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\programacomparador.vhd" -loga  "C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\copiadora.srr" 
 rc:0 success:1
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs|o|1525804595|2459
+C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\synwork\copiadora_comp.srs|o|1526329000|1711
 "C:\users\eduardo|i|0|0
-sanchez\documents\facultad\2018-2\dl\proyecto|i|0|0
+sanchez\documents\facultad\2018-2\disenologico\proyecto|i|0|0
 2|i|0|0
 -|i|0|0
 copiadora|i|0|0
 -|i|0|0
 comparador\programacomparador.vhd"|i|0|0
-C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\copiadora.srr|o|1525804595|1626
+C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\copiadora.srr|o|1526329000|1807
 C:\ispLEVER_Classic2_0\synpbase\bin\c_vhdl.exe|i|1401249098|2046976
 C:\ispLEVER_Classic2_0\synpbase\bin64\c_vhdl.exe|i|1401249304|5533184

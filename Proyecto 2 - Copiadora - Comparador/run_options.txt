@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03LC 
-#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\dl\proyecto 2 - copiadora - comparador\run_options.txt
-#--  Written on Tue May 08 13:36:35 2018
+#--  Project file C:\users\eduardo sanchez\documents\facultad\2018-2\disenologico\proyecto 2 - copiadora - comparador\run_options.txt
+#--  Written on Mon May 14 15:16:39 2018
 
 
 #project files
@@ -52,5 +52,5 @@ set_option -write_apr_constraint 1
 project -result_file "./copiadora.edi"
 
 #set log file 
-set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/dl/proyecto 2 - copiadora - comparador/copiadora.srf" 
+set_option log_file "C:/users/eduardo sanchez/documents/facultad/2018-2/disenologico/proyecto 2 - copiadora - comparador/copiadora.srf" 
 impl -active "proyecto 2 - copiadora - comparador"

@@ -11,8 +11,9 @@ B0 { A In Default None 0 1 50 } = 1 40000;
 B1 { A In Default None 0 1 50 } = 0 21000 1 19000;
 B2 { A In Default None 0 1 50 } = 1 40000;
 B3 { A In Default None 0 1 50 } = 1 40000;
-S { A In Default None 0 1 50 } = ;
-AB { A In Default None 0 1 50 } = ;
+S { A In Default None 0 1 50 } = 0 10000 1 10000 0 10000 1 10000
+  ;
+AB { A In Default None 0 1 50 } = 0 20000 1 20000;
 EQ { A Out Default None 0 1 50 } = ;
 EN { A Out Default None 0 1 50 } = ;
 RS { A Out Default None 0 1 50 } = ;

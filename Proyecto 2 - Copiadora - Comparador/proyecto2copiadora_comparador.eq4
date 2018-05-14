@@ -8,7 +8,7 @@ Design copiadora created Mon May 14 15:13:41 2018
  P-Terms   Fan-in  Fan-out  Type  Name (attributes)
 ---------  ------  -------  ----  -----------------
    7/7        5        1    Pin   Mayor 
-  16/8        8        1    Pin   Igual 
+  16/8        8        1    Pin-  Igual 
    7/7        5        1    Pin   Menor 
    5/3        4        1    Node  N_14_0 
    5/3        4        1    Node  N_27_0 

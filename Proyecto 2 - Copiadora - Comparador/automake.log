@@ -1,58 +1,36 @@
 ispLEVER Auto-Make Log File
 ---------------------------
 
-Updating: Functional Simulation
+Updating: Create Fuse Map
 Start to record tcl script...
 Finished recording TCL script.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\exp.exe -lhdl -ext=.ltv -testpt prueba2.wdl -network=copiadora -module=copiadora'
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\fuseasm.exe proyecto2copiadora_comparador.tt3 -dev p22v10g -o proyecto2copiadora_comparador.jed -ivec NoInput.tmv -rep proyecto2copiadora_comparador.rpt -doc brief -con ptblown -for brief -err automake.err -gui'
 
-Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\iblflink.exe "copiadora.blo" -o "copiadora.blh" -omod copiadora -err automake.err -gui'
-
-BLIFLINK  Top-Down Design Linker
+FUSEASM  Fusemap Assembler
 ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
 Portions Copyright(c), 1992-1999, Vantis Corporation
 Portions Copyright(C), 1993-1998, Data I/O Corporation
 Portions Copyright(C), 1997-1998, MINC Washington Corporation
 Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Note 5144: Could not open vector file NoInput.tmv
 
-Top-level file: 'copiadora.blo'
+Input file: 'proyecto2copiadora_comparador.tt3'
+Device: 'P22V10G'
+Building model...
+Choosing best polarities...
+Mapping equations...
+.
+33 of 132 terms used; 0 vectors loaded
+Programmer load file: 'proyecto2copiadora_comparador.jed'
+Generating report...
+Report file: 'proyecto2copiadora_comparador.rpt'
 
-Hierarchical BLIF: 'copiadora.blh'
-
-BLIFLINK complete.  Time: 1 second 
-
-Done: completed successfully.
-
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\syndos iblifopt "copiadora.blh" -o "copiadora.bli" -err automake.err -gui'
-
-BLIFOPT  Open-ABEL Optimizer 
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-U.C. Berkeley, SIS Ver. 1.0, supported by Lattice Semiconductor Corp.
+FUSEASM complete.  Time: 1 second 
 
 Done: completed successfully.
 
-Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\idiofft.exe -i "copiadora.bli" -o "copiadora.blj" -idev PLSI -propadd -dev pla_basic -err automake.err -gui'
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\synsvf.exe -exe "C:\ispLEVER_Classic2_0\ispvmsystem/ispufw" -prj proyecto2copiadora_comparador -if proyecto2copiadora_comparador.jed -j2s -log proyecto2copiadora_comparador.svl -gui'
 
-DIOFFT  Flip-Flop Transformation program
-ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
-Portions Copyright(c), 1992-1999, Vantis Corporation
-Portions Copyright(C), 1993-1998, Data I/O Corporation
-Portions Copyright(C), 1997-1998, MINC Washington Corporation
-Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
-Input file: copiadora.bli.
-Output file: copiadora.blj.
-
-
-DIOFFT complete. - Time 0 seconds
-
+Need not generate svf file according to the constraints, exit
 Done: completed successfully.
-
-Launching: 'C:\ispLEVER_Classic2_0\ispcpld\bin\simcp.exe @simcp._sp'
-

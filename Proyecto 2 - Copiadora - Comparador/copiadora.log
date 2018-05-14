@@ -2,11 +2,11 @@ Starting EDIF2BLIF....
 readEDIF ended normally.
 
 Inspect circuit copiadora
-    Number of input ports   : 10
+    Number of input ports   : 2
     Number of output ports  : 3
     Number of bidir ports   : 0
-    Number of instances     : 48
-    Number of nets          : 58
+    Number of instances     : 71
+    Number of nets          : 79
 
 No design errors found in circuit copiadora
 

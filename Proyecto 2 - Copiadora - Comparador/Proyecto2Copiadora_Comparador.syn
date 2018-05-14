@@ -6,7 +6,7 @@ DEVKIT GAL22V10D-10LP
 ENTRY Pure VHDL
 MODULE programacomparador.vhd
 MODSTYLE copiadora Normal
-STIMULUS copiadora prueba2.wdl
+STIMULUS copiadora test0.wdl
 SYNTHESIS_TOOL Synplify
 SIMULATOR_TOOL ActiveHDL
 TOPMODULE copiadora

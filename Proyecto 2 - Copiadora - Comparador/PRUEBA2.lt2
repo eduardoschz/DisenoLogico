@@ -47,6 +47,18 @@ VECTOR B3 PATTERN 1*(\
  1#0ps,\
   1#40000ps   )
 
+VECTOR S PATTERN 1*(\
+ 0#0ps,\
+ 1#10000ps,\
+ 0#10000ps,\
+ 1#10000ps,\
+  1#10000ps   )
+
+VECTOR AB PATTERN 1*(\
+ 0#0ps,\
+ 1#20000ps,\
+  1#20000ps   )
+
 
 
 FTRACE(prueba2.TRA, "%12t: %b%b%b%b%b%b%b%b%b%b->%b%b%b", $time, AB, S, B3, B2, B1, B0, A3, A2, A1, A0, RS, EN, EQ);

@@ -1,119 +1,170 @@
-#$ DATE Tue May 08 13:36:46 2018
+#$ DATE Mon May 14 15:16:48 2018
 #$ TOOL EDIF2BLIF version IspLever 1.0 
 #$ MODULE copiadora
-#$ PINS 13 A0 A1 A2 A3 B0 B1 B2 B3 S AB EQ EN RS
-#$ NODES 45 un21_eq un9_eq un18_eq un6_eq un15_eq un3_eq un12_eq eq AB_i S_i \
-#  A0_i B0_i A1_i B1_i A2_i B2_i A3_i B3_i A0_c A1_c \
-#  A2_c A3_c B0_c B1_c B2_c B3_c S_c AB_c EN_c RS_c \
-#  N_18_0 eq_i un12_eq_i un3_eq_i un15_eq_i un6_eq_i un18_eq_i un9_eq_i un21_eq_i N_18_0_1 \
-#  N_18_0_2 N_18_0_3 N_18_0_4 N_18_0_5 N_18_0_6 
+#$ PINS 11 A_3_ B_3_ Mayor Igual Menor A_2_ A_1_ A_0_ B_2_ B_1_ B_0_
+#$ NODES 66 mayor igual menor N_2 N_3 N_4 N_13_1 N_26_1 N_13 N_11 \
+#  N_26 N_30 N_29 N_28 N_27 N_6 N_17 N_7 N_16 N_8 \
+#  N_15 N_9 N_14 N_10 b_i_3__n b_i_2__n b_i_1__n N_8_i N_6_i N_10_i \
+#  a_i_0__n b_i_0__n N_2_i N_3_i N_4_i a_c_0__n a_c_1__n a_c_2__n a_c_3__n b_c_0__n \
+#  b_c_1__n b_c_2__n b_c_3__n a_c_i_3__n N_7_i a_c_i_2__n N_9_i a_c_i_1__n N_11_i N_13_i \
+#  N_14_0 N_15_i N_16_0 N_17_i mayor_0 N_26_i N_27_0 N_28_i N_29_0 N_30_i \
+#  menor_0 N_26_1_i N_13_1_i igual_1 igual_2 igual_3 
 .model copiadora
-.inputs A0.BLIF A1.BLIF A2.BLIF A3.BLIF B0.BLIF B1.BLIF B2.BLIF B3.BLIF S.BLIF \
-  AB.BLIF un21_eq.BLIF un9_eq.BLIF un18_eq.BLIF un6_eq.BLIF un15_eq.BLIF un3_eq.BLIF un12_eq.BLIF eq.BLIF \
-  AB_i.BLIF S_i.BLIF A0_i.BLIF B0_i.BLIF A1_i.BLIF B1_i.BLIF A2_i.BLIF B2_i.BLIF A3_i.BLIF \
-  B3_i.BLIF A0_c.BLIF A1_c.BLIF A2_c.BLIF A3_c.BLIF B0_c.BLIF B1_c.BLIF B2_c.BLIF B3_c.BLIF \
-  S_c.BLIF AB_c.BLIF EN_c.BLIF RS_c.BLIF N_18_0.BLIF eq_i.BLIF un12_eq_i.BLIF un3_eq_i.BLIF un15_eq_i.BLIF \
-  un6_eq_i.BLIF un18_eq_i.BLIF un9_eq_i.BLIF un21_eq_i.BLIF N_18_0_1.BLIF N_18_0_2.BLIF N_18_0_3.BLIF N_18_0_4.BLIF N_18_0_5.BLIF \
-  N_18_0_6.BLIF  
-.outputs EQ EN RS un21_eq un9_eq un18_eq un6_eq un15_eq un3_eq un12_eq eq \
-  AB_i S_i A0_i B0_i A1_i B1_i A2_i B2_i A3_i B3_i A0_c \
-  A1_c A2_c A3_c B0_c B1_c B2_c B3_c S_c AB_c EN_c RS_c \
-  N_18_0 eq_i un12_eq_i un3_eq_i un15_eq_i un6_eq_i un18_eq_i un9_eq_i un21_eq_i N_18_0_1 N_18_0_2 \
-  N_18_0_3 N_18_0_4 N_18_0_5 N_18_0_6
-.names  A0.BLIF A0_c
+.inputs A_3_.BLIF B_3_.BLIF A_2_.BLIF A_1_.BLIF A_0_.BLIF B_2_.BLIF B_1_.BLIF B_0_.BLIF mayor.BLIF \
+  igual.BLIF menor.BLIF N_2.BLIF N_3.BLIF N_4.BLIF N_13_1.BLIF N_26_1.BLIF N_13.BLIF N_11.BLIF \
+  N_26.BLIF N_30.BLIF N_29.BLIF N_28.BLIF N_27.BLIF N_6.BLIF N_17.BLIF N_7.BLIF N_16.BLIF \
+  N_8.BLIF N_15.BLIF N_9.BLIF N_14.BLIF N_10.BLIF b_i_3__n.BLIF b_i_2__n.BLIF b_i_1__n.BLIF N_8_i.BLIF \
+  N_6_i.BLIF N_10_i.BLIF a_i_0__n.BLIF b_i_0__n.BLIF N_2_i.BLIF N_3_i.BLIF N_4_i.BLIF a_c_0__n.BLIF a_c_1__n.BLIF \
+  a_c_2__n.BLIF a_c_3__n.BLIF b_c_0__n.BLIF b_c_1__n.BLIF b_c_2__n.BLIF b_c_3__n.BLIF a_c_i_3__n.BLIF N_7_i.BLIF a_c_i_2__n.BLIF \
+  N_9_i.BLIF a_c_i_1__n.BLIF N_11_i.BLIF N_13_i.BLIF N_14_0.BLIF N_15_i.BLIF N_16_0.BLIF N_17_i.BLIF mayor_0.BLIF \
+  N_26_i.BLIF N_27_0.BLIF N_28_i.BLIF N_29_0.BLIF N_30_i.BLIF menor_0.BLIF N_26_1_i.BLIF N_13_1_i.BLIF igual_1.BLIF \
+  igual_2.BLIF igual_3.BLIF  
+.outputs Mayor Igual Menor mayor igual menor N_2 N_3 N_4 N_13_1 N_26_1 \
+  N_13 N_11 N_26 N_30 N_29 N_28 N_27 N_6 N_17 N_7 N_16 \
+  N_8 N_15 N_9 N_14 N_10 b_i_3__n b_i_2__n b_i_1__n N_8_i N_6_i N_10_i \
+  a_i_0__n b_i_0__n N_2_i N_3_i N_4_i a_c_0__n a_c_1__n a_c_2__n a_c_3__n b_c_0__n b_c_1__n \
+  b_c_2__n b_c_3__n a_c_i_3__n N_7_i a_c_i_2__n N_9_i a_c_i_1__n N_11_i N_13_i N_14_0 N_15_i \
+  N_16_0 N_17_i mayor_0 N_26_i N_27_0 N_28_i N_29_0 N_30_i menor_0 N_26_1_i N_13_1_i \
+  igual_1 igual_2 igual_3
+.names  A_0_.BLIF a_c_0__n
 1 1
-.names  A1.BLIF A1_c
+.names  A_1_.BLIF a_c_1__n
 1 1
-.names  A2.BLIF A2_c
+.names  A_2_.BLIF a_c_2__n
 1 1
-.names  A3.BLIF A3_c
+.names  A_3_.BLIF a_c_3__n
 1 1
-.names  B0.BLIF B0_c
+.names  B_0_.BLIF b_c_0__n
 1 1
-.names  B1.BLIF B1_c
+.names  B_1_.BLIF b_c_1__n
 1 1
-.names  B2.BLIF B2_c
+.names  B_2_.BLIF b_c_2__n
 1 1
-.names  B3.BLIF B3_c
+.names  B_3_.BLIF b_c_3__n
 1 1
-.names  S.BLIF S_c
+.names  mayor.BLIF Mayor
 1 1
-.names  AB.BLIF AB_c
+.names  igual.BLIF Igual
 1 1
-.names  N_18_0.BLIF EQ
+.names  menor.BLIF Menor
 1 1
-.names  EN_c.BLIF EN
-1 1
-.names  RS_c.BLIF RS
-1 1
-.names  N_18_0_1.BLIF N_18_0_2.BLIF N_18_0_5
-11 1
-.names  N_18_0_3.BLIF N_18_0_4.BLIF N_18_0_6
-11 1
-.names  N_18_0_5.BLIF N_18_0_6.BLIF N_18_0
-11 1
-.names  eq.BLIF eq_i
+.names  N_29_0.BLIF N_29
 0 1
-.names  un12_eq.BLIF un12_eq_i
+.names  N_30.BLIF N_30_i
 0 1
-.names  un3_eq.BLIF un3_eq_i
+.names  menor_0.BLIF menor
 0 1
-.names  un15_eq.BLIF un15_eq_i
+.names  N_26_1.BLIF N_26_1_i
 0 1
-.names  un6_eq.BLIF un6_eq_i
+.names  N_13_1.BLIF N_13_1_i
 0 1
-.names  un18_eq.BLIF un18_eq_i
-0 1
-.names  un9_eq.BLIF un9_eq_i
-0 1
-.names  un21_eq.BLIF un21_eq_i
-0 1
-.names  eq_i.BLIF un3_eq_i.BLIF N_18_0_1
+.names  N_26_1_i.BLIF N_2_i.BLIF igual_1
 11 1
-.names  un6_eq_i.BLIF un9_eq_i.BLIF N_18_0_2
+.names  N_3_i.BLIF N_4_i.BLIF igual_2
 11 1
-.names  un12_eq_i.BLIF un15_eq_i.BLIF N_18_0_3
+.names  igual_1.BLIF igual_2.BLIF igual_3
 11 1
-.names  un18_eq_i.BLIF un21_eq_i.BLIF N_18_0_4
+.names  igual_3.BLIF N_13_1_i.BLIF igual
 11 1
-.names  A0_i.BLIF B0_c.BLIF eq
-11 1
-.names  S_c.BLIF S_i
+.names  a_c_3__n.BLIF a_c_i_3__n
 0 1
-.names  AB_c.BLIF S_i.BLIF RS_c
-11 1
-.names  AB_c.BLIF AB_i
+.names  N_7_i.BLIF N_7
 0 1
-.names  AB_i.BLIF S_c.BLIF EN_c
-11 1
-.names  B3_c.BLIF B3_i
+.names  a_c_2__n.BLIF a_c_i_2__n
 0 1
-.names  A3_c.BLIF B3_i.BLIF un21_eq
-11 1
-.names  A3_c.BLIF A3_i
+.names  N_9_i.BLIF N_9
 0 1
-.names  A3_i.BLIF B3_c.BLIF un9_eq
-11 1
-.names  B2_c.BLIF B2_i
+.names  a_c_1__n.BLIF a_c_i_1__n
 0 1
-.names  A2_c.BLIF B2_i.BLIF un18_eq
-11 1
-.names  A2_c.BLIF A2_i
+.names  N_11_i.BLIF N_11
 0 1
-.names  A2_i.BLIF B2_c.BLIF un6_eq
-11 1
-.names  B1_c.BLIF B1_i
+.names  N_13.BLIF N_13_i
 0 1
-.names  A1_c.BLIF B1_i.BLIF un15_eq
-11 1
-.names  A1_c.BLIF A1_i
+.names  N_14_0.BLIF N_14
 0 1
-.names  A1_i.BLIF B1_c.BLIF un3_eq
-11 1
-.names  B0_c.BLIF B0_i
+.names  N_15.BLIF N_15_i
 0 1
-.names  A0_c.BLIF B0_i.BLIF un12_eq
+.names  N_16_0.BLIF N_16
+0 1
+.names  N_17.BLIF N_17_i
+0 1
+.names  mayor_0.BLIF mayor
+0 1
+.names  N_26.BLIF N_26_i
+0 1
+.names  N_27_0.BLIF N_27
+0 1
+.names  N_28.BLIF N_28_i
+0 1
+.names  a_c_2__n.BLIF b_i_2__n.BLIF N_8
 11 1
-.names  A0_c.BLIF A0_i
+.names  a_c_i_3__n.BLIF b_c_3__n.BLIF N_7_i
+11 1
+.names  b_c_3__n.BLIF b_i_3__n
+0 1
+.names  a_c_3__n.BLIF b_i_3__n.BLIF N_6
+11 1
+.names  N_6_i.BLIF N_29.BLIF N_30
+11 1
+.names  N_9.BLIF N_28_i.BLIF N_29_0
+11 1
+.names  N_8.BLIF N_8_i
+0 1
+.names  N_8_i.BLIF N_27.BLIF N_28
+11 1
+.names  N_11.BLIF N_26_i.BLIF N_27_0
+11 1
+.names  N_6_i.BLIF N_17_i.BLIF mayor_0
+11 1
+.names  N_7.BLIF N_16.BLIF N_17
+11 1
+.names  N_8_i.BLIF N_15_i.BLIF N_16_0
+11 1
+.names  N_9.BLIF N_14.BLIF N_15
+11 1
+.names  N_10_i.BLIF N_13_i.BLIF N_14_0
+11 1
+.names  a_c_i_1__n.BLIF b_c_1__n.BLIF N_11_i
+11 1
+.names  b_c_1__n.BLIF b_i_1__n
+0 1
+.names  a_c_1__n.BLIF b_i_1__n.BLIF N_10
+11 1
+.names  a_c_i_2__n.BLIF b_c_2__n.BLIF N_9_i
+11 1
+.names  b_c_2__n.BLIF b_i_2__n
+0 1
+.names  N_2.BLIF N_2_i
+0 1
+.names  N_3.BLIF N_3_i
+0 1
+.names  N_4.BLIF N_4_i
+0 1
+.names  b_c_0__n.BLIF b_i_0__n
+0 1
+.names  a_c_0__n.BLIF b_i_0__n.BLIF N_13_1
+11 1
+.names  a_c_0__n.BLIF a_i_0__n
+0 1
+.names  a_i_0__n.BLIF b_c_0__n.BLIF N_26_1
+11 1
+.names  a_c_3__n.BLIF b_c_3__n.BLIF N_4
+01 1
+10 1
+.names  a_c_2__n.BLIF b_c_2__n.BLIF N_3
+01 1
+10 1
+.names  a_c_1__n.BLIF b_c_1__n.BLIF N_2
+01 1
+10 1
+.names  N_11.BLIF N_13_1.BLIF N_13
+11 1
+.names  N_10.BLIF N_10_i
+0 1
+.names  N_10_i.BLIF N_26_1.BLIF N_26
+11 1
+.names  N_7.BLIF N_30_i.BLIF menor_0
+11 1
+.names  N_6.BLIF N_6_i
 0 1
 .end

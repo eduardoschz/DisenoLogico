@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2018 5 8 13 36 40)
+      (timeStamp 2018 5 14 15 16 43)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "I-2014.03LC , mapper maplat, Build 923R"))
      )
@@ -45,6 +45,15 @@
          )
        )
     )
+    (cell XOR2 (cellType GENERIC)
+       (view prim (viewType NETLIST)
+         (interface
+           (port O (direction OUTPUT))
+           (port I0 (direction INPUT))
+           (port I1 (direction INPUT))
+         )
+       )
+    )
   )
   (library work
     (edifLevel 0)
@@ -52,310 +61,411 @@
     (cell copiadora (cellType GENERIC)
        (view comparador (viewType NETLIST)
          (interface
-           (port A0 (direction INPUT))
-           (port A1 (direction INPUT))
-           (port A2 (direction INPUT))
-           (port A3 (direction INPUT))
-           (port B0 (direction INPUT))
-           (port B1 (direction INPUT))
-           (port B2 (direction INPUT))
-           (port B3 (direction INPUT))
-           (port S (direction INPUT))
-           (port AB (direction INPUT))
-           (port EQ (direction OUTPUT))
-           (port EN (direction OUTPUT))
-           (port RS (direction OUTPUT))
+           (port (array (rename a "A(3:0)") 4) (direction INPUT))
+           (port (array (rename b "B(3:0)") 4) (direction INPUT))
+           (port Mayor (direction OUTPUT))
+           (port Igual (direction OUTPUT))
+           (port Menor (direction OUTPUT))
          )
          (contents
-          (instance A0 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance A1 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance A2 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance A3 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance B0 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance B1 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance B2 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance B3 (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance S (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance AB (viewRef prim (cellRef IBUF (libraryRef mach)))          )
-          (instance EQ (viewRef prim (cellRef OBUF (libraryRef mach)))          )
-          (instance EN (viewRef prim (cellRef OBUF (libraryRef mach)))          )
-          (instance RS (viewRef prim (cellRef OBUF (libraryRef mach)))          )
-          (instance un2_eq_5 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance un2_eq_6 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance un2_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un12_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un3_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un15_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un6_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un18_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un9_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un21_eq_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un2_eq_1 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance un2_eq_2 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance un2_eq_3 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance un2_eq_4 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance (rename eqZ0 "eq") (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance S_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance RSand (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance AB_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance ENand (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance B3_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un21_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance A3_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un9_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance B2_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un18_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance A2_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un6_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance B1_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un15_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance A1_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un3_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance B0_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (instance un12_eq (viewRef prim (cellRef AND2 (libraryRef mach)))          )
-          (instance A0_i (viewRef prim (cellRef INV (libraryRef mach)))          )
-          (net un21_eq (joined
-           (portRef O (instanceRef un21_eq))
-           (portRef I0 (instanceRef un21_eq_i))
+          (instance (rename A_0 "A[0]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename A_1 "A[1]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename A_2 "A[2]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename A_3 "A[3]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename B_0 "B[0]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename B_1 "B[1]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename B_2 "B[2]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance (rename B_3 "B[3]") (viewRef prim (cellRef IBUF (libraryRef mach)))          )
+          (instance Mayor (viewRef prim (cellRef OBUF (libraryRef mach)))          )
+          (instance Igual (viewRef prim (cellRef OBUF (libraryRef mach)))          )
+          (instance Menor (viewRef prim (cellRef OBUF (libraryRef mach)))          )
+          (instance G_37_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_30_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_39_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_26_1_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_13_1_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_5_1 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_5_2 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_5_3 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_5 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance (rename A_c_i_3 "A_c_i[3]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_8_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance (rename A_c_i_2 "A_c_i[2]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_11_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance (rename A_c_i_1 "A_c_i[1]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_14_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_13_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_18_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_15_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_20_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_17_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_22_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_26_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_35_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_28_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_10 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_8 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance (rename B_i_3 "B_i[3]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_7 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_38 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_37 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance N_8_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_36 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_35 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_22 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_21 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_20 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_19 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_18 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_14 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance (rename B_i_1 "B_i[1]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_13 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_11 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance (rename B_i_2 "B_i[2]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_2_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_3_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance N_4_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance (rename B_i_0 "B_i[0]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_1_0_a2_0 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance (rename A_i_0 "A_i[0]") (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_1_0_a2 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_4 (viewRef prim (cellRef XOR2 (libraryRef mach)))          )
+          (instance G_3 (viewRef prim (cellRef XOR2 (libraryRef mach)))          )
+          (instance G_2 (viewRef prim (cellRef XOR2 (libraryRef mach)))          )
+          (instance G_17 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance N_10_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (instance G_34 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance G_39 (viewRef prim (cellRef AND2 (libraryRef mach)))          )
+          (instance N_6_i (viewRef prim (cellRef INV (libraryRef mach)))          )
+          (net (rename mayorZ0 "mayor") (joined
+           (portRef O (instanceRef G_22_i))
+           (portRef I0 (instanceRef Mayor))
           ))
-          (net un9_eq (joined
-           (portRef O (instanceRef un9_eq))
-           (portRef I0 (instanceRef un9_eq_i))
+          (net (rename igualZ0 "igual") (joined
+           (portRef O (instanceRef G_5))
+           (portRef I0 (instanceRef Igual))
           ))
-          (net un18_eq (joined
-           (portRef O (instanceRef un18_eq))
-           (portRef I0 (instanceRef un18_eq_i))
+          (net (rename menorZ0 "menor") (joined
+           (portRef O (instanceRef G_39_i))
+           (portRef I0 (instanceRef Menor))
           ))
-          (net un6_eq (joined
-           (portRef O (instanceRef un6_eq))
-           (portRef I0 (instanceRef un6_eq_i))
+          (net N_2 (joined
+           (portRef O (instanceRef G_2))
+           (portRef I0 (instanceRef N_2_i))
           ))
-          (net un15_eq (joined
-           (portRef O (instanceRef un15_eq))
-           (portRef I0 (instanceRef un15_eq_i))
+          (net N_3 (joined
+           (portRef O (instanceRef G_3))
+           (portRef I0 (instanceRef N_3_i))
           ))
-          (net un3_eq (joined
-           (portRef O (instanceRef un3_eq))
-           (portRef I0 (instanceRef un3_eq_i))
+          (net N_4 (joined
+           (portRef O (instanceRef G_4))
+           (portRef I0 (instanceRef N_4_i))
           ))
-          (net un12_eq (joined
-           (portRef O (instanceRef un12_eq))
-           (portRef I0 (instanceRef un12_eq_i))
+          (net N_13_1 (joined
+           (portRef O (instanceRef G_1_0_a2_0))
+           (portRef I1 (instanceRef G_17))
+           (portRef I0 (instanceRef N_13_1_i))
           ))
-          (net (rename eqZ0 "eq") (joined
-           (portRef O (instanceRef eqZ0))
-           (portRef I0 (instanceRef eq_i))
+          (net N_26_1 (joined
+           (portRef O (instanceRef G_1_0_a2))
+           (portRef I1 (instanceRef G_34))
+           (portRef I0 (instanceRef N_26_1_i))
           ))
-          (net AB_i (joined
-           (portRef O (instanceRef AB_i))
-           (portRef I0 (instanceRef ENand))
+          (net N_13 (joined
+           (portRef O (instanceRef G_17))
+           (portRef I0 (instanceRef N_13_i))
           ))
-          (net S_i (joined
-           (portRef O (instanceRef S_i))
-           (portRef I1 (instanceRef RSand))
+          (net N_11 (joined
+           (portRef O (instanceRef G_14_i))
+           (portRef I0 (instanceRef G_17))
+           (portRef I0 (instanceRef G_35))
           ))
-          (net A0_i (joined
-           (portRef O (instanceRef A0_i))
-           (portRef I0 (instanceRef eqZ0))
+          (net N_26 (joined
+           (portRef O (instanceRef G_34))
+           (portRef I0 (instanceRef N_26_i))
           ))
-          (net B0_i (joined
-           (portRef O (instanceRef B0_i))
-           (portRef I1 (instanceRef un12_eq))
+          (net N_30 (joined
+           (portRef O (instanceRef G_38))
+           (portRef I0 (instanceRef N_30_i))
           ))
-          (net A1_i (joined
-           (portRef O (instanceRef A1_i))
-           (portRef I0 (instanceRef un3_eq))
+          (net N_29 (joined
+           (portRef O (instanceRef G_37_i))
+           (portRef I1 (instanceRef G_38))
           ))
-          (net B1_i (joined
-           (portRef O (instanceRef B1_i))
-           (portRef I1 (instanceRef un15_eq))
+          (net N_28 (joined
+           (portRef O (instanceRef G_36))
+           (portRef I0 (instanceRef N_28_i))
           ))
-          (net A2_i (joined
-           (portRef O (instanceRef A2_i))
-           (portRef I0 (instanceRef un6_eq))
+          (net N_27 (joined
+           (portRef O (instanceRef G_35_i))
+           (portRef I1 (instanceRef G_36))
           ))
-          (net B2_i (joined
-           (portRef O (instanceRef B2_i))
-           (portRef I1 (instanceRef un18_eq))
+          (net N_6 (joined
+           (portRef O (instanceRef G_7))
+           (portRef I0 (instanceRef N_6_i))
           ))
-          (net A3_i (joined
-           (portRef O (instanceRef A3_i))
-           (portRef I0 (instanceRef un9_eq))
+          (net N_17 (joined
+           (portRef O (instanceRef G_21))
+           (portRef I0 (instanceRef N_17_i))
           ))
-          (net B3_i (joined
-           (portRef O (instanceRef B3_i))
-           (portRef I1 (instanceRef un21_eq))
+          (net N_7 (joined
+           (portRef O (instanceRef G_8_i))
+           (portRef I0 (instanceRef G_39))
+           (portRef I0 (instanceRef G_21))
           ))
-          (net A0_c (joined
-           (portRef O (instanceRef A0))
-           (portRef I0 (instanceRef A0_i))
-           (portRef I0 (instanceRef un12_eq))
+          (net N_16 (joined
+           (portRef O (instanceRef G_20_i))
+           (portRef I1 (instanceRef G_21))
           ))
-          (net A0 (joined
-           (portRef A0)
-           (portRef I0 (instanceRef A0))
+          (net N_8 (joined
+           (portRef O (instanceRef G_10))
+           (portRef I0 (instanceRef N_8_i))
           ))
-          (net A1_c (joined
-           (portRef O (instanceRef A1))
-           (portRef I0 (instanceRef A1_i))
-           (portRef I0 (instanceRef un15_eq))
+          (net N_15 (joined
+           (portRef O (instanceRef G_19))
+           (portRef I0 (instanceRef N_15_i))
           ))
-          (net A1 (joined
-           (portRef A1)
-           (portRef I0 (instanceRef A1))
+          (net N_9 (joined
+           (portRef O (instanceRef G_11_i))
+           (portRef I0 (instanceRef G_19))
+           (portRef I0 (instanceRef G_37))
           ))
-          (net A2_c (joined
-           (portRef O (instanceRef A2))
-           (portRef I0 (instanceRef A2_i))
-           (portRef I0 (instanceRef un18_eq))
+          (net N_14 (joined
+           (portRef O (instanceRef G_18_i))
+           (portRef I1 (instanceRef G_19))
           ))
-          (net A2 (joined
-           (portRef A2)
-           (portRef I0 (instanceRef A2))
+          (net N_10 (joined
+           (portRef O (instanceRef G_13))
+           (portRef I0 (instanceRef N_10_i))
           ))
-          (net A3_c (joined
-           (portRef O (instanceRef A3))
-           (portRef I0 (instanceRef A3_i))
-           (portRef I0 (instanceRef un21_eq))
+          (net (rename B_i_3 "B_i[3]") (joined
+           (portRef O (instanceRef B_i_3))
+           (portRef I1 (instanceRef G_7))
           ))
-          (net A3 (joined
-           (portRef A3)
-           (portRef I0 (instanceRef A3))
+          (net (rename B_i_2 "B_i[2]") (joined
+           (portRef O (instanceRef B_i_2))
+           (portRef I1 (instanceRef G_10))
           ))
-          (net B0_c (joined
-           (portRef O (instanceRef B0))
-           (portRef I0 (instanceRef B0_i))
-           (portRef I1 (instanceRef eqZ0))
+          (net (rename B_i_1 "B_i[1]") (joined
+           (portRef O (instanceRef B_i_1))
+           (portRef I1 (instanceRef G_13))
           ))
-          (net B0 (joined
-           (portRef B0)
-           (portRef I0 (instanceRef B0))
+          (net N_8_i (joined
+           (portRef O (instanceRef N_8_i))
+           (portRef I0 (instanceRef G_20))
+           (portRef I0 (instanceRef G_36))
           ))
-          (net B1_c (joined
-           (portRef O (instanceRef B1))
-           (portRef I1 (instanceRef un3_eq))
-           (portRef I0 (instanceRef B1_i))
+          (net N_6_i (joined
+           (portRef O (instanceRef N_6_i))
+           (portRef I0 (instanceRef G_22))
+           (portRef I0 (instanceRef G_38))
           ))
-          (net B1 (joined
-           (portRef B1)
-           (portRef I0 (instanceRef B1))
+          (net N_10_i (joined
+           (portRef O (instanceRef N_10_i))
+           (portRef I0 (instanceRef G_34))
+           (portRef I0 (instanceRef G_18))
           ))
-          (net B2_c (joined
-           (portRef O (instanceRef B2))
-           (portRef I1 (instanceRef un6_eq))
-           (portRef I0 (instanceRef B2_i))
+          (net (rename A_i_0 "A_i[0]") (joined
+           (portRef O (instanceRef A_i_0))
+           (portRef I0 (instanceRef G_1_0_a2))
           ))
-          (net B2 (joined
-           (portRef B2)
-           (portRef I0 (instanceRef B2))
+          (net (rename B_i_0 "B_i[0]") (joined
+           (portRef O (instanceRef B_i_0))
+           (portRef I1 (instanceRef G_1_0_a2_0))
           ))
-          (net B3_c (joined
-           (portRef O (instanceRef B3))
-           (portRef I1 (instanceRef un9_eq))
-           (portRef I0 (instanceRef B3_i))
+          (net N_2_i (joined
+           (portRef O (instanceRef N_2_i))
+           (portRef I1 (instanceRef G_5_1))
           ))
-          (net B3 (joined
-           (portRef B3)
-           (portRef I0 (instanceRef B3))
+          (net N_3_i (joined
+           (portRef O (instanceRef N_3_i))
+           (portRef I0 (instanceRef G_5_2))
           ))
-          (net S_c (joined
-           (portRef O (instanceRef S))
-           (portRef I1 (instanceRef ENand))
-           (portRef I0 (instanceRef S_i))
+          (net N_4_i (joined
+           (portRef O (instanceRef N_4_i))
+           (portRef I1 (instanceRef G_5_2))
           ))
-          (net S (joined
-           (portRef S)
-           (portRef I0 (instanceRef S))
+          (net (rename A_c_0 "A_c[0]") (joined
+           (portRef O (instanceRef A_0))
+           (portRef I0 (instanceRef A_i_0))
+           (portRef I0 (instanceRef G_1_0_a2_0))
           ))
-          (net AB_c (joined
-           (portRef O (instanceRef AB))
-           (portRef I0 (instanceRef AB_i))
-           (portRef I0 (instanceRef RSand))
+          (net (rename A_0 "A[0]") (joined
+           (portRef (member a 3))
+           (portRef I0 (instanceRef A_0))
           ))
-          (net AB (joined
-           (portRef AB)
-           (portRef I0 (instanceRef AB))
+          (net (rename A_c_1 "A_c[1]") (joined
+           (portRef O (instanceRef A_1))
+           (portRef I0 (instanceRef G_2))
+           (portRef I0 (instanceRef G_13))
+           (portRef I0 (instanceRef A_c_i_1))
           ))
-          (net EQ (joined
-           (portRef O (instanceRef EQ))
-           (portRef EQ)
+          (net (rename A_1 "A[1]") (joined
+           (portRef (member a 2))
+           (portRef I0 (instanceRef A_1))
           ))
-          (net EN_c (joined
-           (portRef O (instanceRef ENand))
-           (portRef I0 (instanceRef EN))
+          (net (rename A_c_2 "A_c[2]") (joined
+           (portRef O (instanceRef A_2))
+           (portRef I0 (instanceRef G_3))
+           (portRef I0 (instanceRef G_10))
+           (portRef I0 (instanceRef A_c_i_2))
           ))
-          (net EN (joined
-           (portRef O (instanceRef EN))
-           (portRef EN)
+          (net (rename A_2 "A[2]") (joined
+           (portRef (member a 1))
+           (portRef I0 (instanceRef A_2))
           ))
-          (net RS_c (joined
-           (portRef O (instanceRef RSand))
-           (portRef I0 (instanceRef RS))
+          (net (rename A_c_3 "A_c[3]") (joined
+           (portRef O (instanceRef A_3))
+           (portRef I0 (instanceRef G_4))
+           (portRef I0 (instanceRef G_7))
+           (portRef I0 (instanceRef A_c_i_3))
           ))
-          (net RS (joined
-           (portRef O (instanceRef RS))
-           (portRef RS)
+          (net (rename A_3 "A[3]") (joined
+           (portRef (member a 0))
+           (portRef I0 (instanceRef A_3))
           ))
-          (net N_18_0 (joined
-           (portRef O (instanceRef un2_eq))
-           (portRef I0 (instanceRef EQ))
+          (net (rename B_c_0 "B_c[0]") (joined
+           (portRef O (instanceRef B_0))
+           (portRef I1 (instanceRef G_1_0_a2))
+           (portRef I0 (instanceRef B_i_0))
           ))
-          (net eq_i (joined
-           (portRef O (instanceRef eq_i))
-           (portRef I0 (instanceRef un2_eq_1))
+          (net (rename B_0 "B[0]") (joined
+           (portRef (member b 3))
+           (portRef I0 (instanceRef B_0))
           ))
-          (net un12_eq_i (joined
-           (portRef O (instanceRef un12_eq_i))
-           (portRef I0 (instanceRef un2_eq_3))
+          (net (rename B_c_1 "B_c[1]") (joined
+           (portRef O (instanceRef B_1))
+           (portRef I1 (instanceRef G_2))
+           (portRef I0 (instanceRef B_i_1))
+           (portRef I1 (instanceRef G_14))
           ))
-          (net un3_eq_i (joined
-           (portRef O (instanceRef un3_eq_i))
-           (portRef I1 (instanceRef un2_eq_1))
+          (net (rename B_1 "B[1]") (joined
+           (portRef (member b 2))
+           (portRef I0 (instanceRef B_1))
           ))
-          (net un15_eq_i (joined
-           (portRef O (instanceRef un15_eq_i))
-           (portRef I1 (instanceRef un2_eq_3))
+          (net (rename B_c_2 "B_c[2]") (joined
+           (portRef O (instanceRef B_2))
+           (portRef I1 (instanceRef G_3))
+           (portRef I0 (instanceRef B_i_2))
+           (portRef I1 (instanceRef G_11))
           ))
-          (net un6_eq_i (joined
-           (portRef O (instanceRef un6_eq_i))
-           (portRef I0 (instanceRef un2_eq_2))
+          (net (rename B_2 "B[2]") (joined
+           (portRef (member b 1))
+           (portRef I0 (instanceRef B_2))
           ))
-          (net un18_eq_i (joined
-           (portRef O (instanceRef un18_eq_i))
-           (portRef I0 (instanceRef un2_eq_4))
+          (net (rename B_c_3 "B_c[3]") (joined
+           (portRef O (instanceRef B_3))
+           (portRef I1 (instanceRef G_4))
+           (portRef I0 (instanceRef B_i_3))
+           (portRef I1 (instanceRef G_8))
           ))
-          (net un9_eq_i (joined
-           (portRef O (instanceRef un9_eq_i))
-           (portRef I1 (instanceRef un2_eq_2))
+          (net (rename B_3 "B[3]") (joined
+           (portRef (member b 0))
+           (portRef I0 (instanceRef B_3))
           ))
-          (net un21_eq_i (joined
-           (portRef O (instanceRef un21_eq_i))
-           (portRef I1 (instanceRef un2_eq_4))
+          (net Mayor (joined
+           (portRef O (instanceRef Mayor))
+           (portRef Mayor)
           ))
-          (net N_18_0_1 (joined
-           (portRef O (instanceRef un2_eq_1))
-           (portRef I0 (instanceRef un2_eq_5))
+          (net Igual (joined
+           (portRef O (instanceRef Igual))
+           (portRef Igual)
           ))
-          (net N_18_0_2 (joined
-           (portRef O (instanceRef un2_eq_2))
-           (portRef I1 (instanceRef un2_eq_5))
+          (net Menor (joined
+           (portRef O (instanceRef Menor))
+           (portRef Menor)
           ))
-          (net N_18_0_3 (joined
-           (portRef O (instanceRef un2_eq_3))
-           (portRef I0 (instanceRef un2_eq_6))
+          (net (rename A_c_i_3 "A_c_i[3]") (joined
+           (portRef O (instanceRef A_c_i_3))
+           (portRef I0 (instanceRef G_8))
           ))
-          (net N_18_0_4 (joined
-           (portRef O (instanceRef un2_eq_4))
-           (portRef I1 (instanceRef un2_eq_6))
+          (net N_7_i (joined
+           (portRef O (instanceRef G_8))
+           (portRef I0 (instanceRef G_8_i))
           ))
-          (net N_18_0_5 (joined
-           (portRef O (instanceRef un2_eq_5))
-           (portRef I0 (instanceRef un2_eq))
+          (net (rename A_c_i_2 "A_c_i[2]") (joined
+           (portRef O (instanceRef A_c_i_2))
+           (portRef I0 (instanceRef G_11))
           ))
-          (net N_18_0_6 (joined
-           (portRef O (instanceRef un2_eq_6))
-           (portRef I1 (instanceRef un2_eq))
+          (net N_9_i (joined
+           (portRef O (instanceRef G_11))
+           (portRef I0 (instanceRef G_11_i))
+          ))
+          (net (rename A_c_i_1 "A_c_i[1]") (joined
+           (portRef O (instanceRef A_c_i_1))
+           (portRef I0 (instanceRef G_14))
+          ))
+          (net N_11_i (joined
+           (portRef O (instanceRef G_14))
+           (portRef I0 (instanceRef G_14_i))
+          ))
+          (net N_13_i (joined
+           (portRef O (instanceRef N_13_i))
+           (portRef I1 (instanceRef G_18))
+          ))
+          (net N_14_0 (joined
+           (portRef O (instanceRef G_18))
+           (portRef I0 (instanceRef G_18_i))
+          ))
+          (net N_15_i (joined
+           (portRef O (instanceRef N_15_i))
+           (portRef I1 (instanceRef G_20))
+          ))
+          (net N_16_0 (joined
+           (portRef O (instanceRef G_20))
+           (portRef I0 (instanceRef G_20_i))
+          ))
+          (net N_17_i (joined
+           (portRef O (instanceRef N_17_i))
+           (portRef I1 (instanceRef G_22))
+          ))
+          (net mayor_0 (joined
+           (portRef O (instanceRef G_22))
+           (portRef I0 (instanceRef G_22_i))
+          ))
+          (net N_26_i (joined
+           (portRef O (instanceRef N_26_i))
+           (portRef I1 (instanceRef G_35))
+          ))
+          (net N_27_0 (joined
+           (portRef O (instanceRef G_35))
+           (portRef I0 (instanceRef G_35_i))
+          ))
+          (net N_28_i (joined
+           (portRef O (instanceRef N_28_i))
+           (portRef I1 (instanceRef G_37))
+          ))
+          (net N_29_0 (joined
+           (portRef O (instanceRef G_37))
+           (portRef I0 (instanceRef G_37_i))
+          ))
+          (net N_30_i (joined
+           (portRef O (instanceRef N_30_i))
+           (portRef I1 (instanceRef G_39))
+          ))
+          (net menor_0 (joined
+           (portRef O (instanceRef G_39))
+           (portRef I0 (instanceRef G_39_i))
+          ))
+          (net N_26_1_i (joined
+           (portRef O (instanceRef N_26_1_i))
+           (portRef I0 (instanceRef G_5_1))
+          ))
+          (net N_13_1_i (joined
+           (portRef O (instanceRef N_13_1_i))
+           (portRef I1 (instanceRef G_5))
+          ))
+          (net igual_1 (joined
+           (portRef O (instanceRef G_5_1))
+           (portRef I0 (instanceRef G_5_3))
+          ))
+          (net igual_2 (joined
+           (portRef O (instanceRef G_5_2))
+           (portRef I1 (instanceRef G_5_3))
+          ))
+          (net igual_3 (joined
+           (portRef O (instanceRef G_5_3))
+           (portRef I0 (instanceRef G_5))
           ))
          )
         (property orig_inst_of (string "copiadora"))
